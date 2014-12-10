@@ -767,6 +767,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        stepMutationPower.setEnabled(false);
         StepOptions.add(stepMutationPower, gridBagConstraints);
 
         jLabel14.setText("High");
@@ -790,6 +791,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
                 stepMutationRateStateChanged(evt);
             }
         });
+        stepMutationRate.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
         StepOptions.add(stepMutationRate, gridBagConstraints);
@@ -881,7 +883,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
                 	toggleDynamicPOPV.setText("Turn Dynamic POPV On");
             }
         });
-        //toggleDynamicPOPV.setEnabled(false);
+        toggleDynamicPOPV.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 12);
         ParetoOptions.add(toggleDynamicPOPV, gridBagConstraints);
@@ -943,6 +945,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
                 optimizeEvaluationLimitStateChanged(evt);
             }
         });
+        optimizeEvaluationLimit.setEnabled(false);
         OptimizeOptions.add(optimizeEvaluationLimit, new java.awt.GridBagConstraints());
 
         jLabel6.setText("2,500");
@@ -966,6 +969,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
                 optimizeMutationRateStateChanged(evt);
             }
         });
+        optimizeMutationRate.setEnabled(false);
         OptimizeOptions.add(optimizeMutationRate, new java.awt.GridBagConstraints());
 
         jLabel8.setText("High");
