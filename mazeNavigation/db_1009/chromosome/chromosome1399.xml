@@ -1,0 +1,39 @@
+<chromosome id="1399" primary-parent-id="1104">
+<neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="in" activation="linear"/>
+<neuron id="6" type="in" activation="linear"/>
+<neuron id="7" type="in" activation="linear"/>
+<neuron id="8" type="in" activation="linear"/>
+<neuron id="9" type="in" activation="linear"/>
+<neuron id="10" type="in" activation="linear"/>
+<neuron id="11" type="out" activation="sigmoid"/>
+<connection id="12" src-id="0" dest-id="11" weight="2.833075768487276"/>
+<connection id="13" src-id="1" dest-id="11" weight="2.8194595620384706"/>
+<connection id="14" src-id="2" dest-id="11" weight="-2.312456051519651"/>
+<connection id="15" src-id="3" dest-id="11" weight="-2.2272878512127208"/>
+<connection id="16" src-id="4" dest-id="11" weight="-3.109774442222344"/>
+<connection id="17" src-id="5" dest-id="11" weight="1.501209781883726"/>
+<connection id="18" src-id="6" dest-id="11" weight="-2.1233533910566447"/>
+<connection id="19" src-id="7" dest-id="11" weight="1.2986975392830802"/>
+<connection id="20" src-id="8" dest-id="11" weight="-2.322524561580196"/>
+<connection id="21" src-id="9" dest-id="11" weight="-2.117947087436803"/>
+<connection id="22" src-id="10" dest-id="11" weight="2.068198822116609"/>
+<neuron id="23" type="out" activation="sigmoid"/>
+<connection id="24" src-id="0" dest-id="23" weight="1.9673219504773158"/>
+<connection id="25" src-id="1" dest-id="23" weight="4.347029408252932"/>
+<connection id="26" src-id="2" dest-id="23" weight="3.50479562852338"/>
+<connection id="27" src-id="3" dest-id="23" weight="1.411123483274118"/>
+<connection id="28" src-id="4" dest-id="23" weight="0.5956268310635698"/>
+<connection id="30" src-id="6" dest-id="23" weight="0.5581096252607836"/>
+<connection id="31" src-id="7" dest-id="23" weight="-1.858585914055086"/>
+<connection id="32" src-id="8" dest-id="23" weight="2.277382091776061"/>
+<connection id="33" src-id="9" dest-id="23" weight="-0.29161591022013256"/>
+<connection id="34" src-id="10" dest-id="23" weight="2.2034727521964435"/>
+<neuron id="193" type="hid" activation="sigmoid"/>
+<connection id="194" src-id="5" dest-id="193" weight="4.345191336411197"/>
+<connection id="195" src-id="193" dest-id="23" weight="2.866940271182971"/>
+</chromosome>
