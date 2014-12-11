@@ -24,7 +24,7 @@ public class PoaiecDomainProperties extends Properties {
     public PoaiecDomainProperties() {
         super();
         put("run.name", "unknown");
-        put("run.reset", "true");
+        put("run.reset", "false");
 
         // evolution
         //------------------

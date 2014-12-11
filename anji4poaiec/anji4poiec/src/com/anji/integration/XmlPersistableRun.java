@@ -56,6 +56,7 @@ public class XmlPersistableRun implements XmlPersistable {
     public final static String ID_TAG = "id";
     public final static String FITNESS_TAG = "fitness";
     public final static String FUNCTION_TAG = "function";
+    public final static String NOVELTY_TAG = "novelty";
     public final static String DIMENSION_TAG = "d";
     
     /**
@@ -130,10 +131,11 @@ public class XmlPersistableRun implements XmlPersistable {
 	                BehaviorVector pt = allPointsVisited.get(chrom);
 	                cacheBuffer.append("  ").append(openTag(BEHAVIOR_TAG));
 	                cacheBuffer.append("    ").append(inLine(ID_TAG, chrom.getId()));
-	                cacheBuffer.append("    ").append(inLine(FITNESS_TAG, FUNCTION_TAG, chrom.getFitnessValues()));
+	                cacheBuffer.append("    ").append(inLine(FITNESS_TAG, FUNCTION_TAG, "      ", chrom.getFitnessValues()));
 	                for (int i=0; i<pt.size(); i++) {
 	                    cacheBuffer.append("    ").append(inLine(DIMENSION_TAG+i, pt.get(i)));
 	                }
+	                cacheBuffer.append("      ").append(inLine(NOVELTY_TAG, chrom.getNoveltyValue()));
 	                cacheBuffer.append("  ").append(closeTag(BEHAVIOR_TAG));
 	            }
 	            cacheBuffer.append(closeTag(ALL_BEHAVIORS_TAG));
@@ -259,10 +261,10 @@ public class XmlPersistableRun implements XmlPersistable {
 		return inLine(tag, tag_value, Integer.toString(value));
 	}
     
-    private String inLine(String tag, String subtag, HashMap<Long, Integer> values) {
+    private String inLine(String tag, String subtag, String indent, HashMap<Long, Integer> values) {
     	String ret = "<" + tag + ">\n";
     	for (Entry<Long, Integer> val : values.entrySet()) {
-    		ret += inLine(subtag, val.getKey(), val.getValue());
+    		ret += indent + inLine(subtag, val.getKey(), val.getValue());
     	}
 		return ret;
     }
