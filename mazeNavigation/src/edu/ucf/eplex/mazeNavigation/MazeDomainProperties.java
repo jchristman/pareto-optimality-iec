@@ -98,15 +98,15 @@ public class MazeDomainProperties extends PoaiecDomainProperties {
 
         // persistence
         //------------------
-        put("persistence.class", "com.anji.persistence.FilePersistence");
-        put("persistence.base.dir", "./db");
-        put("persist.all", "false");
-        put("persist.champions", "true");
-        put("persist.last", "false");
-        put("id.file", "./db/id.xml");
-        put("neat.id.file", "./db/neatid.xml");
-        put("presentation.dir", "./nevt");
-        put("presentation.active", "false");
+//        put("persistence.class", "com.anji.persistence.FilePersistence");
+//        put("persistence.base.dir", "./db");
+//        put("persist.all", "false");
+//        put("persist.champions", "true");
+//        put("persist.last", "false");
+//        put("id.file", "./db/id.xml");
+//        put("neat.id.file", "./db/neatid.xml");
+//        put("presentation.dir", "./nevt");
+//        put("presentation.active", "false");
 
     }
 

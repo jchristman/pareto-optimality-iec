@@ -198,9 +198,9 @@ public class IecStep {
         if (champFitness != null) {
         	result.append(indent(3)).append(open(CHAMP_FITNESS_TAG,""));
         	for (Entry<Long, Integer> entry : champFitness.entrySet()) {
-        		result.append(indent(4)).append(open(OBJECTIVE_FUNC_TAG, OBJECTIVE_ID_TAG + "=\"" + entry.getKey() + "\""));
-        		result.append(indent(5)).append(entry.getValue());
-        		result.append(indent(4)).append(close(OBJECTIVE_FUNC_TAG));
+        		result.append(indent(4)).append(openNoNewLine(OBJECTIVE_FUNC_TAG, OBJECTIVE_ID_TAG + "=\"" + entry.getKey() + "\""));
+        		result.append(entry.getValue());
+        		result.append(close(OBJECTIVE_FUNC_TAG));
         	}
         	result.append(indent(3)).append(close(CHAMP_FITNESS_TAG));
         }
@@ -310,6 +310,10 @@ public class IecStep {
      *      </chromosome>
      *  </step>
      */
+    private String openNoNewLine(String label, String attributes) {
+        return new StringBuilder().append("<").append(label).append(" ").append(attributes).append(">").toString();
+    }
+    
     private String open(String label, String attributes) {
         return new StringBuilder().append("<").append(label).append(" ").append(attributes).append(">\n").toString();
     }

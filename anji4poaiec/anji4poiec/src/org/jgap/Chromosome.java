@@ -538,9 +538,9 @@ public class Chromosome implements Comparable<Chromosome>, Serializable {
         // Editor: Joshua Christman - Modified to correctly write the MOEA objective values to XML
         StringBuilder fitness = new StringBuilder("\n");
         for (Entry<Long,Integer> entry : getFitnessValues().entrySet()) {
-        	fitness.append(indent(8)).append(open(OBJECTIVE_TAG, OBJECTIVE_ID_TAG + "=\"" + entry.getKey() + "\""));
-        	fitness.append(indent(12)).append(entry.getValue());
-        	fitness.append(indent(12)).append(close(OBJECTIVE_TAG));
+        	fitness.append(indent(5)).append(openNoNewline(OBJECTIVE_TAG, OBJECTIVE_ID_TAG + "=\"" + entry.getKey() + "\""));
+        	fitness.append(entry.getValue());
+        	fitness.append(close(OBJECTIVE_TAG)).append(indent(4));
         }
         
         result.append(indent(4)).append(textContentElement(FITNESS_TAG, fitness));
@@ -558,6 +558,10 @@ public class Chromosome implements Comparable<Chromosome>, Serializable {
         return new StringBuilder().append("<").append(label).append(">\n").toString();
     }
 
+    private String openNoNewline(String label, String attributes) {
+        return new StringBuilder().append("<").append(label).append(" ").append(attributes).append(">").toString();
+    }
+    
     private String open(String label, String attributes) {
         return new StringBuilder().append("<").append(label).append(" ").append(attributes).append(">\n").toString();
     }

@@ -180,7 +180,11 @@ public class PoaiecRun implements XmlPersistable {
     
     public void startParetoFunction(Genotype genotype, EvaluationDomain<?> domain) {
     	updateSession(genotype, domain);
-    	current.setAction(StepType.FITNESS);
+        if (history.isEmpty()) {
+            current.setAction(StepType.INITIAL);
+        } else {
+        	current.setAction(StepType.FITNESS);
+        }
     }
 
     public void startOptimizeFunction(Genotype genotype, EvaluationDomain<?> domain) {

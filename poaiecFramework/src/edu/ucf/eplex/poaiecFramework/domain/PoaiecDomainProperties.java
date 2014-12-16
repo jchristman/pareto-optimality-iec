@@ -75,7 +75,7 @@ public class PoaiecDomainProperties extends Properties {
         // persistence
         //------------------
         put("persistence.class", "com.anji.persistence.FilePersistence");
-        put("persistence.base.dir", "./db_1009");
+        put("persistence.base.dir", "./db_1009/");
         put("persist.all", "false");
         put("persist.champions", "true");
         put("persist.last", "true");

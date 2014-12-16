@@ -191,8 +191,18 @@ public class PoaiecController {
      *
      */
 	public void save() {
-		// throw new
-		// UnsupportedOperationException("The SAVE function is currently undefined.");
+        history.updateSession(genotype, f_domain);
+        try {
+            File runLogDir = new File(logDirName);
+            runLogDir.mkdirs();
+
+            // Persist iecSessionLog to a file...where will this go?
+            BufferedWriter out = new BufferedWriter(new FileWriter(new File(logDirName + slash + startTime + ".xml")));
+            out.write(history.toXml());
+            out.close();
+        } catch (IOException ex) {
+            Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
 	}
 
 	/**
