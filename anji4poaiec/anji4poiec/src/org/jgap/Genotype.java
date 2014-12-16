@@ -1098,20 +1098,21 @@ public class Genotype extends ProgressSource implements Serializable {
 
 	private Collection<Long> chromosomeIdArchive = new HashSet<Long>();
 
-	// public synchronized List<Chromosome> getLineage(Chromosome chromosome) {
-	// readLock.lock();
-	// try {
-	// LinkedList<Chromosome> lineage = new LinkedList<Chromosome>();
-	// lineage.push(chromosome);
-	// while (chromosome.getPrimaryParentId() != null) {
-	// chromosome = chromosomeArchive.get(chromosome.getPrimaryParentId());
-	// lineage.push(chromosome);
-	// }
-	// return lineage;
-	// } finally {
-	// readLock.unlock();
-	// }
-	// }
+//	public synchronized List<Chromosome> getLineage(Chromosome chromosome) {
+//		readLock.lock();
+//		try {
+//			LinkedList<Chromosome> lineage = new LinkedList<Chromosome>();
+//			lineage.push(chromosome);
+//			while (chromosome.getPrimaryParentId() != null) {
+//				chromosome = chromosomeIdArchive.get(chromosome.getPrimaryParentId());
+//				lineage.push(chromosome);
+//			}
+//			return lineage;
+//		} finally {
+//			readLock.unlock();
+//		}
+//	}
+	
 	public synchronized int getCurrentNoveltyArchiveSize() {
 		readLock.lock();
 		int val = 0;

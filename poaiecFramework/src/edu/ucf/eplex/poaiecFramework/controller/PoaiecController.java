@@ -12,17 +12,25 @@ import com.anji.Copyright;
 import com.anji.hyperneat.HyperNeatConfiguration;
 import com.anji.integration.LogEventListener;
 import com.anji.integration.PersistenceEventListener;
+import com.anji.integration.XmlPersistableChromosome;
 import com.anji.neat.NeatConfiguration;
 import com.anji.persistence.Persistence;
 import com.anji.run.Run;
 import com.anji.util.Properties;
 import com.anji.util.Reset;
 
+import edu.ucf.eplex.mazeNavigation.behaviorFramework.ANN_Behavior;
+import edu.ucf.eplex.mazeNavigation.behaviorFramework.Behavior;
+import edu.ucf.eplex.mazeNavigation.gui.PathPanel;
+import edu.ucf.eplex.mazeNavigation.model.Environment;
+import edu.ucf.eplex.mazeNavigation.model.Maze;
 import edu.ucf.eplex.poaiecFramework.domain.Candidate;
 import edu.ucf.eplex.poaiecFramework.domain.EvaluationDomain;
 
-import java.awt.Dimension;
-import java.awt.image.RenderedImage;
+import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,6 +38,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.imageio.ImageIO;
 
 import org.jgap.*;
 import org.jgap.event.GeneticEvent;
@@ -48,7 +58,10 @@ public class PoaiecController {
 	private Persistence db = null;
 	private final EvaluationDomain<?> f_domain;
 	private PoaiecRun history;
-	private final long UUID = 2013L;
+    private char slash = File.separatorChar;
+    private final String logDirName = "." + slash + "runLogs";
+    private final String archiveName = "." + slash + "archive";
+    private Long startTime = System.currentTimeMillis();
 	/**
      *
      */
@@ -187,21 +200,106 @@ public class PoaiecController {
 	 * @param index
 	 */
 	public void publish(int index) {
-		Dimension size = new Dimension(512, 512);
-		Candidate subject = getCandidate(index);
+        history.updateSession(genotype, f_domain);
 
-		try {
-			for (RenderedImage image : f_domain.getPhenotypeBehavior(subject,
-					size)) {
-				// renderer.applyBackground(bi.getGraphics(), size,
-				// Color.WHITE);
-				db.store(image, subject.getId());
-			}
-		} catch (IOException ex) {
-			Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE,
-					null, ex);
-		}
+        // Setup the archive directory
+        File archive = new File(logDirName);
+        if (!archive.exists()) {
+            archive.mkdir();
+        }
+
+        // Setup the series directory
+        int seriesId = 0;
+        File seriesDir = new File(logDirName + slash + seriesId);
+        while (seriesDir.exists()) {
+            seriesId++;
+            seriesDir = new File(logDirName + slash + seriesId);
+        }
+        seriesDir.mkdir();
+
+        // Drop a DateTimeSignature file into the series directory
+        try {
+            File signatureFile = new File(seriesDir.getCanonicalPath() + slash + startTime);
+            signatureFile.createNewFile();
+        } catch (IOException ex) {
+            Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        // Write out champ.xml (i.e. the chromosome to be published)
+        Chromosome champ = getChromosome(index);
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter(new File(seriesDir.getCanonicalPath() + slash + "champ.xml")));
+            out.write(new XmlPersistableChromosome(champ).toXml());
+            out.close();
+        } catch (IOException ex) {
+            Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        // Write out main.xml (i.e. the summary of the IEC seesion)
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter(new File(seriesDir.getCanonicalPath() + slash + "main.xml")));
+            out.write(history.toXml());
+            out.close();
+        } catch (IOException ex) {
+            Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+//        // Write out a unique file (seriesId.chromId.xml) for each
+//        // chromosome in the lineage of the champ
+//        for (Chromosome chrom : genotype.getLineage(champ)) {
+//            try {
+//                String chromFileName = seriesDir.getCanonicalPath() + slash + seriesId + "." + chrom.getId() + ".xml";
+//                BufferedWriter out = new BufferedWriter(new FileWriter(new File(chromFileName)));
+//                out.write(new XmlPersistableChromosome(chrom).toXml());
+//                out.close();
+//            } catch (IOException ex) {
+//                Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+
+        // Write out an image of the phenotype behavior
+        // ------------------------------
+        Environment env = getPhenotypeBehavior(champ);
+
+        // Create a new PathPanel based on the map and the path.
+        // ------------------------------
+        PathPanel pathPanel = new PathPanel(env.getMap(), env.getPath()); //, noveltyFunction.getArchivedPts());
+        pathPanel.setSize(4 * env.getMap().getWidth(), 4 * env.getMap().getHeight());
+
+        //create a buffered image based on the panel
+        // ------------------------------
+        BufferedImage image = new BufferedImage(pathPanel.getWidth(), pathPanel.getHeight(), BufferedImage.TYPE_INT_RGB);
+
+        // Paint the map and the robot path onto the buffered image.
+        // ------------------------------
+        image.getGraphics();
+        pathPanel.paint(image.getGraphics());
+
+        // Write the buffered image to a file
+        // ------------------------------
+        try {
+            File imageFile = new File(seriesDir.getCanonicalPath() + slash + "champ.png");
+            ImageIO.write(image, "PNG", imageFile);
+        } catch (IOException ex) {
+            Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
 	}
+	
+	private Environment getPhenotypeBehavior(Chromosome chrom) {
+        // Build ANN Behavior from chrom.
+        // ------------------------------
+        Behavior phenotype = new ANN_Behavior(this.getCandidate(chrom));
+        Environment env = new Environment(phenotype, Maze.getHardMap());
+
+        // Evaluate over x timesteps (or until distToGoal <= 5)
+        for (int i = 0; i < 400; i++) {
+            env.step();
+            if (env.distToGoal() <= 5) {
+                break;
+            }
+        }
+        return env;
+    }
 
 	/**
 	 *
@@ -523,9 +621,4 @@ public class PoaiecController {
 		}
 		return result;
 	}
-
-	public long getEvaluationFunctionUUID() {
-		return UUID;
-	}
-
 }

@@ -44,6 +44,7 @@ import javax.swing.JCheckBox;
 import javax.swing.LayoutStyle;
 
 import org.jgap.BehaviorVector;
+import org.jgap.Chromosome;
 import org.jgap.Configuration;
 import org.jgap.EvaluationFunction;
 import org.jgap.InvalidConfigurationException;
