@@ -40,6 +40,7 @@ public class PoaiecRun implements XmlPersistable {
     private IecStep current = new IecStep(userActionLog.size(), StepType.INITIAL);
     private final LinkedList<IecStep> history = new LinkedList<IecStep>();
     private final LinkedList<IecStep> future = new LinkedList<IecStep>();
+    private List<HashMap<Long, Double>> POPVhistory = new LinkedList<HashMap<Long,Double>>();
 //    private List<BehaviorVector> archivedPoints = new LinkedList<BehaviorVector>();
 //    private List<BehaviorVector> allPoints = new LinkedList<BehaviorVector>();
 
@@ -198,6 +199,7 @@ public class PoaiecRun implements XmlPersistable {
     public void updateSession(Genotype genotype, EvaluationDomain<?> domain) {
         System.out.println("in iecSession.updateSession()...currentAction == " + current.getAction().name());
         evaluations = genotype.getSeriesEvaluationCount();
+        //POPVhistory.add(genotype.m_activeConfiguration.getPOPV());
 //        allPoints = domain.getAllPointsVisited();
 //        archivedPoints = domain.getArchivedBehaviors();
         archiveSize = domain.getNoveltyArchiveSize();
@@ -211,6 +213,7 @@ public class PoaiecRun implements XmlPersistable {
 //        allPoints = noveltyMetric.getAllPts();
 //        archivedPoints = noveltyMetric.getArchivedBehaviors();
         evaluations = genotype.getSeriesEvaluationCount();
+        POPVhistory.add(new HashMap<Long,Double>(genotype.m_activeConfiguration.getPOPV()));
         archiveSize = domain.getNoveltyArchiveSize();
         current.update(genotype);
         current.recordEndOfStep();
@@ -250,7 +253,9 @@ public class PoaiecRun implements XmlPersistable {
         result.append(indent(1)).append(textContentElement(TIME_ELAPSED_TAG, timeElapsed));
 
         result.append(indent(1)).append(open(IEC_STEP_TAG, COUNT_TAG + "=\"" + getSeriesUserActionCount() + "\""));
+        int i = 0;
         for (IecStep step : userActionLog) {
+        	step.setLastPOPV(POPVhistory.get(i++));
             result.append(step.toXml());
         }
         result.append(indent(1)).append(close(IEC_STEP_TAG));

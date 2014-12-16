@@ -59,7 +59,7 @@ public class Genotype extends ProgressSource implements Serializable {
 	/**
 	 * The current active Configuration instance.
 	 */
-	protected Configuration m_activeConfiguration;
+	public Configuration m_activeConfiguration;
 	/**
 	 * Species that makeup this Genotype's population.
 	 */

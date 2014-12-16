@@ -43,6 +43,7 @@ public class IecStep {
     private long startTime = System.currentTimeMillis();
     private long iecEvalTime = -1;
     private long runTime = -1;
+    private HashMap<Long,Double> lastPOPV;
 
     public IecStep(long anId, StepType userAction) {
         this(null, anId, userAction);
@@ -54,6 +55,7 @@ public class IecStep {
         action = userAction;
         if (aGenotype != null) {
             update(aGenotype);
+            lastPOPV = aGenotype.m_activeConfiguration.getPOPV();
         }
     }
 
@@ -180,6 +182,10 @@ public class IecStep {
             evaluationCount = null;
         }
     }
+    
+    public void setLastPOPV(HashMap<Long,Double> popv) {
+    	lastPOPV = popv;
+    }
 
     /**
      * @return 
@@ -195,6 +201,17 @@ public class IecStep {
         }
         result.append(indent(3)).append(textContentElement(IEC_EVAL_TIME_TAG, runTime));
         result.append(indent(3)).append(textContentElement(RUNTIME_TAG, runTime));
+        
+        if (lastPOPV != null) {
+		    result.append(indent(3)).append(open(POPV_TAG, ""));
+		    for (Entry<Long, Double> entry : lastPOPV.entrySet()) {
+		    	result.append(indent(4)).append(openNoNewLine(OBJECTIVE_FUNC_TAG, OBJECTIVE_ID_TAG + "=\"" + entry.getKey() + "\""));
+				result.append(entry.getValue());
+				result.append(close(OBJECTIVE_FUNC_TAG));
+		    }
+			result.append(indent(3)).append(close(POPV_TAG));
+        }
+        
         if (champFitness != null) {
         	result.append(indent(3)).append(open(CHAMP_FITNESS_TAG,""));
         	for (Entry<Long, Integer> entry : champFitness.entrySet()) {
@@ -343,6 +360,7 @@ public class IecStep {
     public final static String RUNTIME_TAG = "runTime";
     public final static String EVALUATION_COUNT_TAG = "evaluations";
     public final static String CHAMP_FITNESS_TAG = "champFitness";
+    public final static String POPV_TAG = "POPV";
     public final static String OBJECTIVE_FUNC_TAG = "objectiveFunction";
     public final static String OBJECTIVE_ID_TAG = "obj_id";
     public final static String SPECIES_TAG = "species";

@@ -1,0 +1,261 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<series>
+    <evaluations>1744</evaluations>
+    <archive>293</archive>
+    <time>71039</time>
+    <iecSteps count="6">
+        <step id="0">
+            <action>INITIAL</action>
+            <evaluations>250</evaluations>
+            <iecEvalTime>2592</iecEvalTime>
+            <runTime>2592</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">85</objectiveFunction>
+                <objectiveFunction obj_id="9001">14</objectiveFunction>
+                <objectiveFunction obj_id="9002">11</objectiveFunction>
+                <objectiveFunction obj_id="9003">87</objectiveFunction>
+                <objectiveFunction obj_id="9005">1</objectiveFunction>
+            </champFitness>
+            <archive>157</archive>
+            <species>1</species>
+        </step>
+        <step id="1">
+            <action>FITNESS</action>
+            <evaluations>249</evaluations>
+            <iecEvalTime>1689</iecEvalTime>
+            <runTime>1689</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">57</objectiveFunction>
+                <objectiveFunction obj_id="9001">6</objectiveFunction>
+                <objectiveFunction obj_id="9002">6</objectiveFunction>
+                <objectiveFunction obj_id="9003">97</objectiveFunction>
+                <objectiveFunction obj_id="9005">6</objectiveFunction>
+            </champFitness>
+            <archive>279</archive>
+            <species>1</species>
+            <chromosome id="374">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9000">31</objective>
+                    <objective obj_id="9001">11</objective>
+                    <objective obj_id="9002">11</objective>
+                    <objective obj_id="9003">93</objective>
+                    <objective obj_id="9005">11</objective>
+                </fitness>
+                <novelty>19</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+        </step>
+        <step id="2">
+            <action>FITNESS</action>
+            <evaluations>249</evaluations>
+            <iecEvalTime>1582</iecEvalTime>
+            <runTime>1582</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">54</objectiveFunction>
+                <objectiveFunction obj_id="9001">6</objectiveFunction>
+                <objectiveFunction obj_id="9002">6</objectiveFunction>
+                <objectiveFunction obj_id="9003">97</objectiveFunction>
+                <objectiveFunction obj_id="9005">6</objectiveFunction>
+            </champFitness>
+            <archive>229</archive>
+            <species>1</species>
+            <chromosome id="489">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9000">35</objective>
+                    <objective obj_id="9001">16</objective>
+                    <objective obj_id="9002">14</objective>
+                    <objective obj_id="9003">89</objective>
+                    <objective obj_id="9005">16</objective>
+                </fitness>
+                <novelty>4</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+        </step>
+        <step id="3">
+            <action>FITNESS</action>
+            <evaluations>249</evaluations>
+            <iecEvalTime>1566</iecEvalTime>
+            <runTime>1566</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">68</objectiveFunction>
+                <objectiveFunction obj_id="9001">29</objectiveFunction>
+                <objectiveFunction obj_id="9002">33</objectiveFunction>
+                <objectiveFunction obj_id="9003">82</objectiveFunction>
+                <objectiveFunction obj_id="9005">29</objectiveFunction>
+            </champFitness>
+            <archive>284</archive>
+            <species>1</species>
+            <chromosome id="842">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9000">37</objective>
+                    <objective obj_id="9001">28</objective>
+                    <objective obj_id="9002">17</objective>
+                    <objective obj_id="9003">74</objective>
+                    <objective obj_id="9005">28</objective>
+                </fitness>
+                <novelty>3</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+        </step>
+        <step id="4">
+            <action>FITNESS</action>
+            <evaluations>249</evaluations>
+            <iecEvalTime>1591</iecEvalTime>
+            <runTime>1591</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">71</objectiveFunction>
+                <objectiveFunction obj_id="9001">54</objectiveFunction>
+                <objectiveFunction obj_id="9002">54</objectiveFunction>
+                <objectiveFunction obj_id="9003">67</objectiveFunction>
+                <objectiveFunction obj_id="9005">54</objectiveFunction>
+            </champFitness>
+            <archive>314</archive>
+            <species>1</species>
+            <chromosome id="1076">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9000">68</objective>
+                    <objective obj_id="9001">29</objective>
+                    <objective obj_id="9002">33</objective>
+                    <objective obj_id="9003">82</objective>
+                    <objective obj_id="9005">29</objective>
+                </fitness>
+                <novelty>20</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+        </step>
+        <step id="5">
+            <action>FITNESS</action>
+            <evaluations>249</evaluations>
+            <iecEvalTime>1548</iecEvalTime>
+            <runTime>1548</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">93</objectiveFunction>
+                <objectiveFunction obj_id="9001">59</objectiveFunction>
+                <objectiveFunction obj_id="9002">76</objectiveFunction>
+                <objectiveFunction obj_id="9003">63</objectiveFunction>
+                <objectiveFunction obj_id="9005">59</objectiveFunction>
+            </champFitness>
+            <archive>356</archive>
+            <species>1</species>
+            <chromosome id="1261">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9000">61</objective>
+                    <objective obj_id="9001">47</objective>
+                    <objective obj_id="9002">66</objective>
+                    <objective obj_id="9003">67</objective>
+                    <objective obj_id="9005">47</objective>
+                </fitness>
+                <novelty>6</novelty>
+                <nodes>13</nodes>
+                <connections>21</connections>
+            </chromosome>
+        </step>
+        <step id="6">
+            <action>FITNESS</action>
+            <evaluations>249</evaluations>
+            <iecEvalTime>1728</iecEvalTime>
+            <runTime>1728</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9000">0.6323529411764706</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.673469387755102</objectiveFunction>
+                <objectiveFunction obj_id="9005">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9000">93</objectiveFunction>
+                <objectiveFunction obj_id="9001">59</objectiveFunction>
+                <objectiveFunction obj_id="9002">76</objectiveFunction>
+                <objectiveFunction obj_id="9003">63</objectiveFunction>
+                <objectiveFunction obj_id="9005">59</objectiveFunction>
+            </champFitness>
+            <archive>293</archive>
+            <species>1</species>
+            <chromosome id="1261">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9000">61</objective>
+                    <objective obj_id="9001">47</objective>
+                    <objective obj_id="9002">66</objective>
+                    <objective obj_id="9003">67</objective>
+                    <objective obj_id="9005">47</objective>
+                </fitness>
+                <novelty>6</novelty>
+                <nodes>13</nodes>
+                <connections>21</connections>
+            </chromosome>
+            <chromosome id="1801">
+                <selection>true</selection>
+                <solution>true</solution>
+                <fitness>
+                    <objective obj_id="9000">99</objective>
+                    <objective obj_id="9001">57</objective>
+                    <objective obj_id="9002">67</objective>
+                    <objective obj_id="9003">63</objective>
+                    <objective obj_id="9005">57</objective>
+                </fitness>
+                <novelty>1</novelty>
+                <nodes>13</nodes>
+                <connections>21</connections>
+            </chromosome>
+        </step>
+    </iecSteps>
+    </allPoints>
+</series>
