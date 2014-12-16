@@ -573,24 +573,24 @@ public class PoaiecSession extends JFrame implements ProgressListener {
         gridBagConstraints.ipady = 10;
         Controls.add(Forward, gridBagConstraints);
 
-        Step.setIcon(icons.get("step"));
-        Step.setToolTipText("Step");
-        Step.setBorder(null);
-        Step.setHorizontalTextPosition(SwingConstants.CENTER);
-        Step.setPreferredSize(new java.awt.Dimension(85, 80));
-        Step.setRolloverEnabled(true);
-        Step.setVerticalTextPosition(SwingConstants.BOTTOM);
-        Step.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                StepMouseClicked(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 14;
-        gridBagConstraints.ipady = 20;
-        Controls.add(Step, gridBagConstraints);
+//        Step.setIcon(icons.get("step"));
+//        Step.setToolTipText("Step");
+//        Step.setBorder(null);
+//        Step.setHorizontalTextPosition(SwingConstants.CENTER);
+//        Step.setPreferredSize(new java.awt.Dimension(85, 80));
+//        Step.setRolloverEnabled(true);
+//        Step.setVerticalTextPosition(SwingConstants.BOTTOM);
+//        Step.addMouseListener(new java.awt.event.MouseAdapter() {
+//            public void mouseClicked(java.awt.event.MouseEvent evt) {
+//                StepMouseClicked(evt);
+//            }
+//        });
+//        gridBagConstraints = new java.awt.GridBagConstraints();
+//        gridBagConstraints.gridx = 3;
+//        gridBagConstraints.gridy = 0;
+//        gridBagConstraints.ipadx = 14;
+//        gridBagConstraints.ipady = 20;
+//        Controls.add(Step, gridBagConstraints);
 
 //        Novelty.setIcon(icons.get("novelty"));
 //        Novelty.setToolTipText("Novelty");
@@ -624,7 +624,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
         	}
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 15;
         gridBagConstraints.ipady = 20;
@@ -643,7 +643,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 26;
         gridBagConstraints.ipady = 20;
@@ -667,7 +667,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 15;
         gridBagConstraints.ipady = 20;
@@ -686,7 +686,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 13;
         gridBagConstraints.ipady = 20;
@@ -710,11 +710,11 @@ public class PoaiecSession extends JFrame implements ProgressListener {
         gridBagConstraints.gridy = 1;
         Controls.add(jLabel19, gridBagConstraints);
 
-        jLabel20.setFont(new java.awt.Font("Lucida Grande", 1, 14));
-        jLabel20.setText("STEP");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridy = 1;
-        Controls.add(jLabel20, gridBagConstraints);
+//        jLabel20.setFont(new java.awt.Font("Lucida Grande", 1, 14));
+//        jLabel20.setText("STEP");
+//        gridBagConstraints = new java.awt.GridBagConstraints();
+//        gridBagConstraints.gridy = 1;
+//        Controls.add(jLabel20, gridBagConstraints);
 
 //        jLabel21.setFont(new java.awt.Font("Lucida Grande", 1, 14));
 //        jLabel21.setText("NOVELTY");
