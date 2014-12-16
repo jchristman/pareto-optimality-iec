@@ -540,10 +540,10 @@ public class Chromosome implements Comparable<Chromosome>, Serializable {
         for (Entry<Long,Integer> entry : getFitnessValues().entrySet()) {
         	fitness.append(indent(5)).append(openNoNewline(OBJECTIVE_TAG, OBJECTIVE_ID_TAG + "=\"" + entry.getKey() + "\""));
         	fitness.append(entry.getValue());
-        	fitness.append(close(OBJECTIVE_TAG)).append(indent(4));
+        	fitness.append(close(OBJECTIVE_TAG));
         }
         
-        result.append(indent(4)).append(textContentElement(FITNESS_TAG, fitness));
+        result.append(indent(4)).append(textContentElement(FITNESS_TAG, fitness.append(indent(4))));
         
         result.append(indent(4)).append(textContentElement(NOVELTY_TAG, getNoveltyValue()));
         result.append(indent(4)).append(textContentElement(NODE_TAG, getNodes().size()));
