@@ -503,7 +503,7 @@ public class PoaiecSession extends JFrame implements ProgressListener {
         Member143 = new EvaluationPanel();
 
         setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Novelty-Assisted IEC Framework");
+        setTitle("Pareto Optimality-Assisted IEC Framework");
         setName("PopulationFrame");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
