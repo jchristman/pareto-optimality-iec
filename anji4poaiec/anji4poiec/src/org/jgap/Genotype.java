@@ -68,6 +68,7 @@ public class Genotype extends ProgressSource implements Serializable {
 	 * Chromosomes that makeup this Genotype's population.
 	 */
 	private List<Chromosome> m_chromosomes = new ArrayList<Chromosome>();
+	private List<Chromosome> unfiltered_chromosomes = new ArrayList<Chromosome>();
 	private List<Chromosome> lastFitnessPopulation = new ArrayList<Chromosome>();
 	private float iecMutationRate = 0.1f;
 	private float iecMutationPower = 0.1f;
@@ -281,6 +282,16 @@ public class Genotype extends ProgressSource implements Serializable {
 		readLock.lock();
 		try {
 			return m_chromosomes;
+			// return new ArrayList<Chromosome>(m_chromosomes);
+		} finally {
+			readLock.unlock();
+		}
+	}
+	
+	public synchronized List<Chromosome> getUnfilteredChromosomes() {
+		readLock.lock();
+		try {
+			return unfiltered_chromosomes;
 			// return new ArrayList<Chromosome>(m_chromosomes);
 		} finally {
 			readLock.unlock();
@@ -900,7 +911,18 @@ public class Genotype extends ProgressSource implements Serializable {
 		evaluateForFitness();
 		for (EvaluationFunction func : m_activeConfiguration
 				.getBulkFitnessFunctions().values()) {
-			func.evaluateNovelty(m_chromosomes);
+			func.evaluateNovelty(m_chromosomes); // Because this evaluates everything!
+			break; // Only need to evaluate for novelty once
+		}
+	}
+
+	private void evaluateForNovelty(List<Chromosome> toEvaluate) {
+		// Evaluate the new population of of chromosomes.
+		// -------------------------------------
+		//evaluateForFitness();
+		for (EvaluationFunction func : m_activeConfiguration
+				.getBulkFitnessFunctions().values()) {
+			func.evaluateNovelty(toEvaluate);
 			break; // Only need to evaluate for novelty once
 		}
 	}
@@ -1526,6 +1548,7 @@ public class Genotype extends ProgressSource implements Serializable {
 		lastFitnessPopulation.addAll(m_chromosomes);
 
 		setPopulation(population);
+		unfiltered_chromosomes = m_chromosomes;
 		finishProgressListeners();
 
 		fireGeneticEvents();
@@ -1616,21 +1639,21 @@ public class Genotype extends ProgressSource implements Serializable {
 		}
 
 		setChromosomes(selectedChromosomes);
+		unfiltered_chromosomes = selectedChromosomes;
 
 		//System.out.println("Sorting chromosomes before insertion");
 		try { Collections.sort(paretoChromosomes, dominanceComparator); }
 		catch (IllegalArgumentException e) {}
 		Collections.reverse(paretoChromosomes);
-		//System.out.println("Printing sorted list");
-		//for (Chromosome chrom : paretoChromosomes)
-		//	System.out.println(chrom.getId());
+		
+		unfiltered_chromosomes.addAll(paretoChromosomes);
+		evaluateForNovelty(unfiltered_chromosomes);
+		
 		List<Chromosome> dominantSolutions = new LinkedList<Chromosome>();
 		for (Chromosome chrom : paretoChromosomes)
 			if (chrom.dominatedBy.size() == 0)
 				dominantSolutions.add(chrom);
 		appendToPopulation(dominantSolutions);
-
-		evaluateForNovelty();
 		
 		finishProgressListeners();
 

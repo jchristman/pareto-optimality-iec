@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -254,6 +255,15 @@ public class PoaiecController {
             Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        // Write out endpointMap.xml (i.e. all of the points visited)
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter(new File(seriesDir.getCanonicalPath() + slash + "endpointMap.xml")));
+            out.write(genEndpointMap());
+            out.close();
+        } catch (IOException ex) {
+            Logger.getLogger(PoaiecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
 //        // Write out a unique file (seriesId.chromId.xml) for each
 //        // chromosome in the lineage of the champ
 //        for (Chromosome chrom : genotype.getLineage(champ)) {
@@ -295,6 +305,22 @@ public class PoaiecController {
         }
 	}
 	
+	private String genEndpointMap() {
+        StringBuilder result = new StringBuilder(); 
+        result.append("<?xml version = \"1.0\" encoding = \"UTF-8\"?>\n");
+        result.append("<endpoints>\n");
+        for (Entry<Candidate,BehaviorVector> entry : f_domain.getAllPointsVisited().entrySet()) {
+        	result.append("\t<endpoint id='").append(entry.getKey().getChromosome().getId()).append("'>\n");
+        	double[] behaviorVector = entry.getValue().getValues();
+        	result.append("\t\t<x>").append(behaviorVector[0]).append("</x>\n");
+        	result.append("\t\t<y>").append(behaviorVector[1]).append("</y>\n");
+        	result.append("\t\t<theta>").append(behaviorVector[2]).append("</theta>\n");
+        	result.append("\t</endpoint>\n");
+        }
+        result.append("</endpoints>");
+        return result.toString();
+	}
+
 	private Environment getPhenotypeBehavior(Chromosome chrom) {
         // Build ANN Behavior from chrom.
         // ------------------------------

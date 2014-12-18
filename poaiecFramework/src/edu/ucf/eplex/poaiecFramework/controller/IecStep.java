@@ -34,6 +34,7 @@ public class IecStep {
     private StepType action;
     private HashMap<Long, Integer> champFitness;
     private List<Chromosome> population = new ArrayList<Chromosome>();
+    private List<Chromosome> fullPopulation = new ArrayList<Chromosome>();
     private List<Chromosome> selected = new ArrayList<Chromosome>();
     private List<Chromosome> unselected = new ArrayList<Chromosome>();
     private List<Chromosome> solutions = new ArrayList<Chromosome>();
@@ -64,6 +65,7 @@ public class IecStep {
         action = anIecStep.action;
         champFitness = anIecStep.champFitness;
         population.addAll(anIecStep.population);
+        fullPopulation.addAll(anIecStep.fullPopulation);
         selected.addAll(anIecStep.selected);
         unselected.addAll(anIecStep.unselected);
         solutions.addAll(anIecStep.solutions);
@@ -165,6 +167,10 @@ public class IecStep {
                 population.clear();
                 population.addAll(aGenotype.getChromosomes());
             }
+            if (!fullPopulation.containsAll(aGenotype.getUnfilteredChromosomes())) {
+            	fullPopulation.clear();
+            	fullPopulation.addAll(aGenotype.getUnfilteredChromosomes());
+            }
             for (Chromosome chrom : population) {
                 if (chrom.isSolution()) {
                     solutions.add(chrom);
@@ -239,6 +245,15 @@ public class IecStep {
                 chrom.setIsSelectedForNextGeneration(isSelected);
             }
         }
+        
+        result.append(indent(3)).append(open(POPULATION_TAG,""));
+        for (Chromosome chrom : fullPopulation) {
+        	result.append(indent(4)).append(open(CHROMOSOME_TAG, chrom.getId().toString()));
+        	result.append(indent(5)).append(textContentElement(NOVELTY_TAG, chrom.getNoveltyValue()));
+        	result.append(indent(5)).append(textContentElement(PARETO_TAG, chrom.numDominatedBy()));
+        	result.append(indent(4)).append(close(CHROMOSOME_TAG));
+        }
+        result.append(indent(3)).append(close(POPULATION_TAG));
 
         result.append(indent(2)).append(close(IEC_STEP_TAG));
 
@@ -366,6 +381,10 @@ public class IecStep {
     public final static String SPECIES_TAG = "species";
     public final static String ARCHIVE_TAG = "archive";
     public final static String COMMAND_TAG = "command";
+    public final static String POPULATION_TAG = "population";
+    public final static String CHROMOSOME_TAG = "chromosome";
+    public final static String NOVELTY_TAG = "noveltyValue";
+    public final static String PARETO_TAG = "paretoFront";
 
     public boolean hasSolution() {
         return !solutions.isEmpty();
