@@ -8,4 +8,4 @@ package com.anji.integration;
  *
  * @author bwoolley
  */
-public enum StepType { INITIAL, STEP, NOVELTY, FITNESS, TEMP , NULL, BACK, FORWARD}
+public enum StepType { INITIAL, STEP, NOVELTY, FITNESS, PARETO, TEMP , NULL, BACK, FORWARD}

@@ -184,7 +184,7 @@ public class PoaiecRun implements XmlPersistable {
         if (history.isEmpty()) {
             current.setAction(StepType.INITIAL);
         } else {
-        	current.setAction(StepType.FITNESS);
+        	current.setAction(StepType.PARETO);
         }
     }
 
