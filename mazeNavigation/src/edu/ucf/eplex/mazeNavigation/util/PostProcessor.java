@@ -39,16 +39,22 @@ import edu.ucf.eplex.mazeNavigation.model.Maze;
  *
  */
 public class PostProcessor {
+	public static String usage = "PostProcessor.jar PATH_TO_RUNLOGS";
 
     /**
      * @param args
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
+    	if (args.length != 1) {
+    		System.out.println(PostProcessor.usage);
+    		return;
+    	}
+    		
         long hack = System.currentTimeMillis();
 
     	Maze maze = Maze.getHardMap();
-        String basePath = "/Users/bwoolley/Documents/CAP7980.7.mazeNavigation.NA-IEC/runResults/userExperiment_noNovelty/results/runLogs-hard";
+        String basePath = args[0];
         List<String> inFiles = new ArrayList<String>();
 		IECseriesTool tool = new IECseriesTool();
 
