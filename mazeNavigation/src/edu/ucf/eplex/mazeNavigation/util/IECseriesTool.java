@@ -13,9 +13,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,6 +29,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
+
+import com.sun.tools.javac.util.Pair;
 
 import edu.ucf.eplex.mazeNavigation.model.Position;
 
@@ -40,7 +47,7 @@ public class IECseriesTool {
 	public Collection<Point2D> getAllPoints(List<String> inFiles) {
 		Collection<Point2D> allPoints = new LinkedList<Point2D>();
 		for (String inFile : inFiles) {
-			System.out.println("Opening " + inFile);
+			//System.out.println("Opening " + inFile);
     		try {
         		InputStream in;
 				in = new FileInputStream(inFile);
@@ -48,7 +55,7 @@ public class IECseriesTool {
     	        builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
     	        Document doc = builder.parse(in);
     	        Node series = doc.getFirstChild();
-    			allPoints.addAll(loadAllPoints(series));
+    			allPoints.addAll(loadAllEndpoints(series));
 	    		in.close();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -63,6 +70,8 @@ public class IECseriesTool {
 		}
 		return allPoints;
 	}
+	
+	
 
 	/**
 	 * Loads points from an XML node structured as follows.
@@ -116,6 +125,21 @@ public class IECseriesTool {
         return allPoints;
 	}
 
+	private Collection<Point2D> loadAllEndpoints(Node seriesNode) {
+		Collection<Point2D> allPoints = new LinkedList<Point2D>();
+		
+        if (seriesNode.getNodeName().equalsIgnoreCase(ENDPOINTS_TAG)) {
+        	Node allPtsNode = seriesNode.getFirstChild();
+        	while (allPtsNode != null) {
+        		if (allPtsNode.getNodeName().equals(ENDPOINT_TAG)) {
+                    allPoints.add(new Position(allPtsNode));
+        		}
+       			allPtsNode = allPtsNode.getNextSibling();
+        	} // end while
+        }
+        return allPoints;
+	}
+	
 	public void printSummary(List<String> inFiles, String label) {
 		long evaluations = 0;
 		long connections = 0;
@@ -128,6 +152,16 @@ public class IECseriesTool {
 		long optimize = 0;
 		long back = 0;
 		long forward = 0;
+		long pareto = 0;
+		// A list of Pairs where the first item is the number of members of the pareto front and the second
+		// is the total novelty of the pareto front. I'm not computing anything to allow processing of the data
+		// in different ways later
+		ArrayList<Pair<Integer,Integer>> paretoFrontInfo = new ArrayList<Pair<Integer,Integer>>();
+		// Calculates how many of the 12 most novel individuals are in the first pareto front
+		ArrayList<Pair<Integer,Integer>> mostNovelPerPF = new ArrayList<Pair<Integer,Integer>>();
+		// Calculates how many of the 12 most novel individuals are in the first 12 solutions presented to the
+		// user.
+		int mostNovelInFirst12 = 0;
 				
 		for (String inFile : inFiles) {
 //			System.out.println("Opening " + inFile);
@@ -150,6 +184,10 @@ public class IECseriesTool {
     	        optimize += getFitnessOperationCount(series);
     	        back += getBackOperationCount(series);
     	        forward += getFwdOperationCount(series);
+    	        pareto += getParetoOperationCount(series);
+    	        getParetoFrontInfo(series, paretoFrontInfo);
+    	        getMostNovelPerPF(series, mostNovelPerPF);
+    	        mostNovelInFirst12 = getMostNovelInFirst12();
 
     	        in.close();
 			} catch (FileNotFoundException e) {
@@ -163,7 +201,24 @@ public class IECseriesTool {
 			}
 			
 		}
-		System.out.println(label + ", " + evaluations + ", " + connections + ", " + nodes + ", " + archiveSize + ", " + timeElapsed + ", " + userOperations + ", " + step + ", " + novelty + ", " + optimize + ", " + back + ", " + forward);
+		
+		String pfInfo = "";
+		for (Pair<Integer,Integer> pair : paretoFrontInfo)
+			pfInfo += pair.fst + ":" + pair.snd + ";";
+		pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
+		
+		String novelPerPF = "";
+		for (Pair<Integer,Integer> pair : mostNovelPerPF)
+			novelPerPF += pair.fst + ":" + pair.snd + ";";
+		novelPerPF = novelPerPF.substring(0, novelPerPF.length() - 1);
+		
+		System.out.println(novelPerPF);
+		
+		System.out.println(label + ", " + evaluations + ", " + connections + ", " + 
+				nodes + ", " + archiveSize + ", " + timeElapsed + ", " + userOperations + ", " + 
+				step + ", " + novelty + ", " + optimize + ", " + back + ", " + forward + ", " + 
+				pareto + ", " + pfInfo);
+		
     	// TODO: generate output that matches this:
 //    	Run0	Run1	Run2	Run3	Run4	Run5	Run6	Run7	Run8	Run9	Run10	Run11	Run12	Run13	Run14	Run15	Run16	Run17	Run18	Run19	Run20	Run21	Run22	Run23	Run24	Run25	Run26	Run27	Run28	Run29	Run30
 //    	Evaluations	3768	22251	3346	1568	1249	1748	750	1748	4493	5992	5996	3103	3539	7678	1029	18199	13373	2527	3498	28028	32410	4491	6426	1749	5706	999	3333	1994	4050	6838	7527
@@ -177,8 +232,142 @@ public class IECseriesTool {
 //    	OPTIMIZE	5	6	4	1	1	2	1	2	7	9	11	7	7	14	2	42	3	1	3	14	27	4	4	0	7	1	0	1	6	10	12
 //    	BACK	0	3	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	11	3	1	0	0	0	3	0	5	0	2
 //    	FORWARD	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0    	
+//    	PARETO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0    	
 		
 	}
+
+	private int getMostNovelInFirst12() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+	private void getMostNovelPerPF(Node series,
+			ArrayList<Pair<Integer,Integer>> mostNovelPerPF) {
+		List<Pair<Integer,Integer>> mostNovelIndividuals = new LinkedList<Pair<Integer,Integer>>();
+		ArrayList<Integer> paretoFronts = new ArrayList<Integer>();
+		
+		if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
+        	Node seriesAttribute = series.getFirstChild();
+        	while (seriesAttribute != null) {
+        		if (seriesAttribute.getNodeName().equals(IEC_STEPS_TAG)) {
+        			Node stepNode = seriesAttribute.getFirstChild();
+        			while (stepNode != null) {
+        				Node stepAttribute = stepNode.getFirstChild();
+        				while (stepAttribute != null) {
+        					if (stepAttribute.getNodeName().equals(POPULATION_TAG)) {
+        						Node chromosome = stepAttribute.getFirstChild();
+        						while (chromosome != null) {
+        							if (chromosome.getNodeName().equals(CHROMOSOME_TAG)) {
+        								Node chromData = chromosome.getFirstChild();
+        								Node pf = null, nov = null;
+        								while (chromData != null) {
+        									if (chromData.getNodeName().equals(NOVELTY_TAG)) nov = chromData;
+        									else if (chromData.getNodeName().equals(PF_TAG)) pf = chromData;
+        									chromData = chromData.getNextSibling();
+        								}
+        								
+        								int paretoFront = Integer.parseInt(pf.getTextContent());
+        								int noveltyValue = Integer.parseInt(nov.getTextContent());
+        								if (!paretoFronts.contains(paretoFront)) paretoFronts.add(paretoFront);
+        								
+        								if (mostNovelIndividuals.size() < 12) {
+        									mostNovelIndividuals.add(new Pair<Integer,Integer>(paretoFront, noveltyValue));
+        								} else {
+        									Pair<Integer,Integer> toReplace = null;
+        									for (Pair<Integer,Integer> solution : mostNovelIndividuals) {
+        										if (solution.snd < noveltyValue || (solution.snd == noveltyValue && solution.fst < paretoFront)) {
+        											if (toReplace == null) toReplace = solution;
+        											else if (toReplace.snd < solution.snd || (toReplace.snd == solution.snd && toReplace.fst < solution.fst)) toReplace = solution;
+        										}
+        									}
+        									if (toReplace != null) {
+        										mostNovelIndividuals.add(mostNovelIndividuals.indexOf(toReplace), new Pair<Integer,Integer>(paretoFront, noveltyValue));
+        										mostNovelIndividuals.remove(toReplace);
+        									}
+        								}
+        							}
+        							chromosome = chromosome.getNextSibling();
+        						}
+        						break;
+        					}
+        					stepAttribute = stepAttribute.getNextSibling();
+        				}
+        				if (true) {
+        					
+        				}
+        				stepNode = stepNode.getNextSibling();
+        			}
+        		}
+        		seriesAttribute = seriesAttribute.getNextSibling();
+        	}
+        }
+
+		Collections.sort(paretoFronts);
+		for (Pair<Integer,Integer> pair : mostNovelIndividuals) {
+			mostNovelPerPF.add(new Pair<Integer,Integer>(paretoFronts.indexOf(pair.fst), pair.snd));
+		}
+	}
+
+
+
+	private void getParetoFrontInfo(Node series,
+			ArrayList<Pair<Integer, Integer>> paretoFrontInfo) {
+		TreeMap<Integer, Pair<Integer,Integer>> pfInfo = new TreeMap<Integer, Pair<Integer,Integer>>();
+		
+        if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
+        	Node seriesAttribute = series.getFirstChild();
+        	while (seriesAttribute != null) {
+        		if (seriesAttribute.getNodeName().equals(IEC_STEPS_TAG)) {
+        			Node stepNode = seriesAttribute.getFirstChild();
+        			while (stepNode != null) {
+        				Node stepAttribute = stepNode.getFirstChild();
+        				while (stepAttribute != null) {
+        					if (stepAttribute.getNodeName().equals(POPULATION_TAG)) {
+        						Node chromosome = stepAttribute.getFirstChild();
+        						while (chromosome != null) {
+        							if (chromosome.getNodeName().equals(CHROMOSOME_TAG)) {
+        								Node chromData = chromosome.getFirstChild();
+        								Node pf = null, nov = null;
+        								while (chromData != null) {
+        									if (chromData.getNodeName().equals(NOVELTY_TAG)) nov = chromData;
+        									else if (chromData.getNodeName().equals(PF_TAG)) pf = chromData;
+        									chromData = chromData.getNextSibling();
+        								}
+        								
+        								int paretoFront = Integer.parseInt(pf.getTextContent());
+        								int noveltyValue = Integer.parseInt(nov.getTextContent());
+        								if (!pfInfo.containsKey(paretoFront)) {
+        									pfInfo.put(paretoFront, new Pair<Integer,Integer>(1,noveltyValue));
+        								} else {
+        									Pair<Integer,Integer> cur = pfInfo.get(paretoFront);
+        									pfInfo.put(paretoFront, new Pair<Integer,Integer>(
+        											cur.fst + 1, cur.snd + noveltyValue));
+        								}
+        							}
+        							chromosome = chromosome.getNextSibling();
+        						}
+        						break;
+        					}
+        					stepAttribute = stepAttribute.getNextSibling();
+        				}
+        				if (true) {
+        					
+        				}
+        				stepNode = stepNode.getNextSibling();
+        			}
+        		}
+        		seriesAttribute = seriesAttribute.getNextSibling();
+        	}
+        }
+        
+        for (Entry<Integer,Pair<Integer,Integer>> entry : pfInfo.entrySet()) {
+        	paretoFrontInfo.add(entry.getValue());
+        }
+	}
+
+
 
 	private long getEvaluations(Node series) {
         if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
@@ -303,6 +492,7 @@ public class IECseriesTool {
 		long fitness = 0;
 		long back = 0;
 		long forward = 0;
+		long pareto = 0;
 		
 		// TODO Loop through each steps in the series, counting the number of Step operations taken, returns the count.
         if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
@@ -329,6 +519,8 @@ public class IECseriesTool {
         							back++;
         						} else if (action.equalsIgnoreCase("FORWARD")) {
         							forward++;
+        						} else if (action.equalsIgnoreCase("PARETO")) {
+        							pareto++;
         						}
         						break;
         					}
@@ -343,7 +535,7 @@ public class IECseriesTool {
         		seriesAttribute = seriesAttribute.getNextSibling();
         	}
         }
-		return new long[] {total, initial, step, novelty, fitness, back, forward};
+		return new long[] {total, initial, step, novelty, fitness, back, forward, pareto};
 	}
 
 	private long getTotalOperationCount(Node series) {
@@ -370,14 +562,23 @@ public class IECseriesTool {
 		return getOperationCount(series)[6];
 	}
 
+	private long getParetoOperationCount(Node series) {
+		return getOperationCount(series)[7];
+	}
+
 	private static final String ACTION_TAG = "action";
 	private static final String ALL_POINTS_TAG = "allPoints";
 	private static final String CHROMOSOME_TAG = "chromosome";
 	private static final String CONNECTION_COUNT_TAG = "connections";
+	private static final String ENDPOINTS_TAG = "endpoints";
+	private static final String ENDPOINT_TAG = "endpoint";
 	private static final String IEC_STEPS_TAG = "iecSteps";
 	private static final String NODE_COUNT_TAG = "nodes";
+	private static final String NOVELTY_TAG = "noveltyValue";
+	private static final String PF_TAG = "paretoFront";
 	private static final String POSITION_COUNT_TAG = "count";
 	private static final String POSITION_TAG = "position";
+	private static final String POPULATION_TAG = "population";
 	private static final String SERIES_TAG = "series";
 	private static final String SOLUTION_TAG = "solution";
 	private static final String STEP_TAG = "step";

@@ -1,5 +1,5 @@
 /**
- * This software is a work of the U.S. Government. It is not subject to copyright 
+  * This software is a work of the U.S. Government. It is not subject to copyright 
  * protection and is in the public domain. It may be used as-is or modified and 
  * re-used. The author and the Air Force Institute of Technology would appreciate 
  * credit if this software or parts of it are used or modified for re-use.
@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +41,9 @@ import edu.ucf.eplex.mazeNavigation.model.Maze;
  */
 public class PostProcessor {
 	public static String usage = "PostProcessor.jar PATH_TO_RUNLOGS";
-
+	private final static boolean RUN_DISTRO = true;
+	private final static boolean SUMMARY = true;
+	
     /**
      * @param args
      * @throws Exception
@@ -73,15 +76,17 @@ public class PostProcessor {
     		}
     		inFiles.add(runDir + "/" + "main.xml");
 
-        	if (args[0].equalsIgnoreCase("-runDistro")) {
-        		System.out.println("Creating run distribution image with " + tool.getAllPoints(inFiles).size() + " points.");
+        	if (RUN_DISTRO) {
+        		List<String> endpointsFile = new LinkedList<String>();
+        		endpointsFile.add(runDir + "/" + "endpointMap.xml");
+        		//System.out.println("Creating run distribution image with " + tool.getAllPoints(inFiles).size() + " points.");
         		Util.saveTo(
         				Util.paintTheRunDistribution(
-        				tool.getAllPoints(inFiles), maze), 
+        				tool.getAllPoints(endpointsFile), maze), 
         				basePath + "/distributions/run" + i);
             }
 
-            if (args[0].equalsIgnoreCase("-summary")) {
+            if (SUMMARY) {
             	tool.printSummary(inFiles, "Run" + i);
             }
 

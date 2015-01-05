@@ -118,7 +118,8 @@ public class Position extends Point2D {
 //          <y>124.21195825030019</y>
 //          <theta>-2.5594879033321343</theta>
 //      </position>
-        if (pose.getNodeName().equalsIgnoreCase(POSITION_TAG)) {
+        if (pose.getNodeName().equalsIgnoreCase(POSITION_TAG) ||
+        	pose.getNodeName().equalsIgnoreCase(ENDPOINT_TAG)) {
             Node coord = pose.getFirstChild();
             while (coord != null) {
                 if (coord.getNodeName().equalsIgnoreCase(X_COORD_TAG)) {
@@ -167,6 +168,7 @@ public class Position extends Point2D {
     private double x, y, theta;
     
     public final static String POSITION_TAG = "position";
+    public final static String ENDPOINT_TAG = "endpoint";
     public final static String X_COORD_TAG = "x";
     public final static String Y_COORD_TAG = "y";
     public final static String THETA_TAG = "theta";

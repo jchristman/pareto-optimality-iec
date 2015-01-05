@@ -1,0 +1,3164 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<series>
+    <evaluations>745</evaluations>
+    <archive>249</archive>
+    <time>52916</time>
+    <iecSteps count="0">
+        <step id="0">
+            <action>INITIAL</action>
+            <evaluations>250</evaluations>
+            <iecEvalTime>4111</iecEvalTime>
+            <runTime>4111</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9005">0.5</objectiveFunction>
+                <objectiveFunction obj_id="9002">0.5</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.5</objectiveFunction>
+                <objectiveFunction obj_id="9000">0.5</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.5</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9005">1</objectiveFunction>
+                <objectiveFunction obj_id="9002">10</objectiveFunction>
+                <objectiveFunction obj_id="9003">89</objectiveFunction>
+                <objectiveFunction obj_id="9000">83</objectiveFunction>
+                <objectiveFunction obj_id="9001">13</objectiveFunction>
+            </champFitness>
+            <archive>146</archive>
+            <species>1</species>
+            <population >
+                <chromosome id="263">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="228">
+                    <noveltyValue>22</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="262">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="278">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="422">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="323">
+                    <noveltyValue>37</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="367">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="313">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="425">
+                    <noveltyValue>40</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="348">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="361">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="215">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="356">
+                    <noveltyValue>41</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="267">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="436">
+                    <noveltyValue>34</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="455">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="322">
+                    <noveltyValue>23</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="457">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="394">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="220">
+                    <noveltyValue>23</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="331">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="230">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="435">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="451">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="292">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="375">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="222">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="406">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="334">
+                    <noveltyValue>40</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="309">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="414">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="326">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="379">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="395">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="288">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="412">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="237">
+                    <noveltyValue>27</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="380">
+                    <noveltyValue>21</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="254">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="297">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="219">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="244">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="383">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="417">
+                    <noveltyValue>14</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="344">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="388">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="338">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="312">
+                    <noveltyValue>40</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="349">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="353">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="428">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="265">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="391">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="212">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="257">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="393">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="441">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="443">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="385">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="290">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="418">
+                    <noveltyValue>21</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="287">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="403">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="217">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="438">
+                    <noveltyValue>69</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="333">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="314">
+                    <noveltyValue>71</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="269">
+                    <noveltyValue>22</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="384">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="341">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="238">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="210">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="272">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="370">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="424">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="447">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="246">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="305">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="277">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="452">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="250">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="283">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="298">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="300">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="337">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="458">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="329">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="405">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="301">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="303">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="335">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="358">
+                    <noveltyValue>23</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="431">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="268">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="397">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="454">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="440">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="289">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="376">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="387">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="234">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="291">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="401">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="327">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="299">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="381">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="423">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="377">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="398">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="439">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="239">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="252">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="434">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="325">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="366">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="430">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="248">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="339">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="315">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="411">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="320">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="317">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="311">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="413">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="427">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="256">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="363">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="308">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="209">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="402">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="294">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="241">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="324">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="378">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="342">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="340">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="453">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="231">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="390">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="310">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="240">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="295">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="345">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="336">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="302">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="369">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="214">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="372">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="357">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="420">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="392">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="328">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="279">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="421">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="275">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="213">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="368">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="374">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="304">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="218">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="273">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="318">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="266">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="346">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="365">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="296">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="321">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="409">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="245">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="364">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="408">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="293">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="224">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="362">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="236">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="382">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="354">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="229">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="223">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="416">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="247">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="347">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="415">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="258">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="396">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="235">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="284">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="282">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="307">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="286">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="259">
+                    <noveltyValue>15</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="281">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="350">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="456">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="332">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="274">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="253">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="371">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="255">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="271">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="319">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="276">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="410">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="260">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>20</paretoFront>
+                </chromosome>
+                <chromosome id="316">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="249">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="351">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="285">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="450">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="225">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="355">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="432">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>23</paretoFront>
+                </chromosome>
+                <chromosome id="429">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>24</paretoFront>
+                </chromosome>
+                <chromosome id="399">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>25</paretoFront>
+                </chromosome>
+                <chromosome id="389">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>26</paretoFront>
+                </chromosome>
+                <chromosome id="445">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>26</paretoFront>
+                </chromosome>
+                <chromosome id="264">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="373">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="242">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="227">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>28</paretoFront>
+                </chromosome>
+                <chromosome id="261">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>28</paretoFront>
+                </chromosome>
+                <chromosome id="226">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>29</paretoFront>
+                </chromosome>
+                <chromosome id="404">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>30</paretoFront>
+                </chromosome>
+                <chromosome id="359">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>31</paretoFront>
+                </chromosome>
+                <chromosome id="437">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>31</paretoFront>
+                </chromosome>
+                <chromosome id="280">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>31</paretoFront>
+                </chromosome>
+                <chromosome id="426">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>32</paretoFront>
+                </chromosome>
+                <chromosome id="419">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>33</paretoFront>
+                </chromosome>
+                <chromosome id="386">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>34</paretoFront>
+                </chromosome>
+                <chromosome id="233">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>35</paretoFront>
+                </chromosome>
+                <chromosome id="251">
+                    <noveltyValue>14</noveltyValue>
+                    <paretoFront>35</paretoFront>
+                </chromosome>
+                <chromosome id="360">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>38</paretoFront>
+                </chromosome>
+                <chromosome id="330">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>38</paretoFront>
+                </chromosome>
+                <chromosome id="446">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>40</paretoFront>
+                </chromosome>
+                <chromosome id="243">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>45</paretoFront>
+                </chromosome>
+                <chromosome id="211">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>46</paretoFront>
+                </chromosome>
+                <chromosome id="442">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>47</paretoFront>
+                </chromosome>
+                <chromosome id="433">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>49</paretoFront>
+                </chromosome>
+                <chromosome id="352">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>51</paretoFront>
+                </chromosome>
+                <chromosome id="448">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>54</paretoFront>
+                </chromosome>
+                <chromosome id="449">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>54</paretoFront>
+                </chromosome>
+                <chromosome id="407">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>55</paretoFront>
+                </chromosome>
+                <chromosome id="221">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>55</paretoFront>
+                </chromosome>
+                <chromosome id="343">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>57</paretoFront>
+                </chromosome>
+                <chromosome id="216">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>59</paretoFront>
+                </chromosome>
+                <chromosome id="444">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>64</paretoFront>
+                </chromosome>
+                <chromosome id="232">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>79</paretoFront>
+                </chromosome>
+                <chromosome id="270">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>95</paretoFront>
+                </chromosome>
+                <chromosome id="306">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>106</paretoFront>
+                </chromosome>
+                <chromosome id="400">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>107</paretoFront>
+                </chromosome>
+            </population>
+        </step>
+        <step id="1">
+            <action>PARETO</action>
+            <evaluations>247</evaluations>
+            <iecEvalTime>1918</iecEvalTime>
+            <runTime>1918</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9005">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.6458333333333334</objectiveFunction>
+                <objectiveFunction obj_id="9000">0.578125</objectiveFunction>
+                <objectiveFunction obj_id="9001">0.8679245283018868</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9005">56</objectiveFunction>
+                <objectiveFunction obj_id="9002">65</objectiveFunction>
+                <objectiveFunction obj_id="9003">66</objectiveFunction>
+                <objectiveFunction obj_id="9000">92</objectiveFunction>
+                <objectiveFunction obj_id="9001">56</objectiveFunction>
+            </champFitness>
+            <archive>255</archive>
+            <species>1</species>
+            <chromosome id="263">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9005">47</objective>
+                    <objective obj_id="9002">30</objective>
+                    <objective obj_id="9003">65</objective>
+                    <objective obj_id="9000">57</objective>
+                    <objective obj_id="9001">47</objective>
+                </fitness>
+                <novelty>6</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+            <chromosome id="215">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9005">11</objective>
+                    <objective obj_id="9002">8</objective>
+                    <objective obj_id="9003">83</objective>
+                    <objective obj_id="9000">59</objective>
+                    <objective obj_id="9001">11</objective>
+                </fitness>
+                <novelty>5</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+            <chromosome id="237">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9005">1</objective>
+                    <objective obj_id="9002">17</objective>
+                    <objective obj_id="9003">84</objective>
+                    <objective obj_id="9000">20</objective>
+                    <objective obj_id="9001">18</objective>
+                </fitness>
+                <novelty>27</novelty>
+                <nodes>13</nodes>
+                <connections>23</connections>
+            </chromosome>
+            <population >
+                <chromosome id="263">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="215">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="237">
+                    <noveltyValue>27</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="557">
+                    <noveltyValue>55</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="479">
+                    <noveltyValue>58</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="570">
+                    <noveltyValue>26</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="618">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="680">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="564">
+                    <noveltyValue>32</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="667">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="584">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="512">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="545">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="538">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="659">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="670">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="591">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="555">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="609">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="481">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="710">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="660">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="711">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="510">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="546">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="669">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="603">
+                    <noveltyValue>15</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="503">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="652">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="543">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="476">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="499">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="502">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="706">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="501">
+                    <noveltyValue>66</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="636">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="548">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="649">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="622">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="607">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="712">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="695">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="664">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="488">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="525">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="707">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="658">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="536">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="694">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="645">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="699">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="540">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="679">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="514">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="620">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="534">
+                    <noveltyValue>16</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="668">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="551">
+                    <noveltyValue>20</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="480">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="709">
+                    <noveltyValue>22</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="520">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="586">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="477">
+                    <noveltyValue>21</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="581">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="631">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="661">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="592">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="630">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="583">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="522">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="651">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="531">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="593">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="493">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="535">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="547">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="497">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="717">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="556">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="478">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="515">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="490">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="623">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="565">
+                    <noveltyValue>22</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="718">
+                    <noveltyValue>19</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="674">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="587">
+                    <noveltyValue>30</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="599">
+                    <noveltyValue>31</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="528">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="577">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="494">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="602">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="691">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="698">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="701">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="612">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="625">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="549">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="491">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="567">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="489">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="685">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="676">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="559">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="634">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="632">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="719">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="562">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="475">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="569">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="629">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="648">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="568">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="595">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="526">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="614">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="594">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="541">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="704">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="637">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="641">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="655">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="615">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="617">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="575">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="601">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="621">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="643">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="650">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="616">
+                    <noveltyValue>25</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="550">
+                    <noveltyValue>21</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="716">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="611">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="714">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="673">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="492">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="619">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="498">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="537">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="590">
+                    <noveltyValue>16</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="516">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="697">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="571">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="635">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="693">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="524">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="585">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="580">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="662">
+                    <noveltyValue>20</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="626">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="504">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="692">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="589">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="533">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="495">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="687">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="513">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="566">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="554">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="627">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="703">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="484">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="678">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="517">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="553">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="700">
+                    <noveltyValue>15</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="552">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="563">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="642">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="654">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="633">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="507">
+                    <noveltyValue>19</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="500">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="705">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="672">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="598">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="702">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="527">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="682">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="558">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="578">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="696">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="663">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="675">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="509">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="677">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="606">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="666">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="574">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="596">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="647">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="576">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="653">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="665">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="683">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="671">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="506">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="561">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="539">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="713">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="644">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="542">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="487">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="597">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="529">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="690">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="573">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="523">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="657">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="530">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="518">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="483">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="689">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="688">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="474">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="681">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="604">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="532">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="656">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="646">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="582">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>24</paretoFront>
+                </chromosome>
+                <chromosome id="519">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>25</paretoFront>
+                </chromosome>
+                <chromosome id="508">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>25</paretoFront>
+                </chromosome>
+                <chromosome id="640">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>26</paretoFront>
+                </chromosome>
+                <chromosome id="684">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="628">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>28</paretoFront>
+                </chromosome>
+                <chromosome id="485">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>29</paretoFront>
+                </chromosome>
+                <chromosome id="521">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>31</paretoFront>
+                </chromosome>
+                <chromosome id="544">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>34</paretoFront>
+                </chromosome>
+                <chromosome id="511">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>36</paretoFront>
+                </chromosome>
+                <chromosome id="638">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>36</paretoFront>
+                </chromosome>
+                <chromosome id="588">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>36</paretoFront>
+                </chromosome>
+                <chromosome id="572">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>37</paretoFront>
+                </chromosome>
+                <chromosome id="482">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>38</paretoFront>
+                </chromosome>
+                <chromosome id="600">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>40</paretoFront>
+                </chromosome>
+                <chromosome id="624">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>41</paretoFront>
+                </chromosome>
+                <chromosome id="496">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>41</paretoFront>
+                </chromosome>
+                <chromosome id="608">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>42</paretoFront>
+                </chromosome>
+                <chromosome id="686">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>45</paretoFront>
+                </chromosome>
+                <chromosome id="613">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>45</paretoFront>
+                </chromosome>
+                <chromosome id="715">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>48</paretoFront>
+                </chromosome>
+                <chromosome id="505">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>50</paretoFront>
+                </chromosome>
+                <chromosome id="639">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>51</paretoFront>
+                </chromosome>
+                <chromosome id="708">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>55</paretoFront>
+                </chromosome>
+                <chromosome id="610">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>55</paretoFront>
+                </chromosome>
+                <chromosome id="605">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>56</paretoFront>
+                </chromosome>
+                <chromosome id="560">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>60</paretoFront>
+                </chromosome>
+                <chromosome id="720">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>64</paretoFront>
+                </chromosome>
+                <chromosome id="486">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>80</paretoFront>
+                </chromosome>
+                <chromosome id="579">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>106</paretoFront>
+                </chromosome>
+            </population>
+        </step>
+        <step id="2">
+            <action>PARETO</action>
+            <evaluations>248</evaluations>
+            <iecEvalTime>1902</iecEvalTime>
+            <runTime>1902</runTime>
+            <POPV >
+                <objectiveFunction obj_id="9005">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9002">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9003">0.65625</objectiveFunction>
+                <objectiveFunction obj_id="9000">1.0</objectiveFunction>
+                <objectiveFunction obj_id="9001">1.0</objectiveFunction>
+            </POPV>
+            <champFitness >
+                <objectiveFunction obj_id="9005">59</objectiveFunction>
+                <objectiveFunction obj_id="9002">67</objectiveFunction>
+                <objectiveFunction obj_id="9003">62</objectiveFunction>
+                <objectiveFunction obj_id="9000">98</objectiveFunction>
+                <objectiveFunction obj_id="9001">57</objectiveFunction>
+            </champFitness>
+            <archive>249</archive>
+            <species>3</species>
+            <chromosome id="557">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9005">56</objective>
+                    <objective obj_id="9002">65</objective>
+                    <objective obj_id="9003">66</objective>
+                    <objective obj_id="9000">92</objective>
+                    <objective obj_id="9001">56</objective>
+                </fitness>
+                <novelty>55</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+            <chromosome id="479">
+                <selection>true</selection>
+                <solution>false</solution>
+                <fitness>
+                    <objective obj_id="9005">41</objective>
+                    <objective obj_id="9002">56</objective>
+                    <objective obj_id="9003">75</objective>
+                    <objective obj_id="9000">46</objective>
+                    <objective obj_id="9001">41</objective>
+                </fitness>
+                <novelty>58</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+            <chromosome id="790">
+                <selection>false</selection>
+                <solution>true</solution>
+                <fitness>
+                    <objective obj_id="9005">59</objective>
+                    <objective obj_id="9002">67</objective>
+                    <objective obj_id="9003">62</objective>
+                    <objective obj_id="9000">98</objective>
+                    <objective obj_id="9001">57</objective>
+                </fitness>
+                <novelty>58</novelty>
+                <nodes>13</nodes>
+                <connections>22</connections>
+            </chromosome>
+            <population >
+                <chromosome id="557">
+                    <noveltyValue>55</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="479">
+                    <noveltyValue>58</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="790">
+                    <noveltyValue>58</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="872">
+                    <noveltyValue>42</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="827">
+                    <noveltyValue>42</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="920">
+                    <noveltyValue>62</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="742">
+                    <noveltyValue>16</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="818">
+                    <noveltyValue>25</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="734">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="975">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="837">
+                    <noveltyValue>14</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="926">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="953">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="791">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="825">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="736">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="733">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="950">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="929">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="974">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="854">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="921">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="865">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="900">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="739">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="753">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="967">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="965">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="972">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="960">
+                    <noveltyValue>14</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="903">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="731">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="866">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="906">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="870">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="751">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="814">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="831">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="809">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>0</paretoFront>
+                </chromosome>
+                <chromosome id="780">
+                    <noveltyValue>47</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="803">
+                    <noveltyValue>43</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="813">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="867">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="886">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="863">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="789">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="966">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="737">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="945">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="970">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="913">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="743">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="944">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="893">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="873">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="938">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="849">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>1</paretoFront>
+                </chromosome>
+                <chromosome id="749">
+                    <noveltyValue>45</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="878">
+                    <noveltyValue>43</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="744">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="802">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="915">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="821">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="939">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="871">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="853">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="928">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="804">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="858">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="940">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="905">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="792">
+                    <noveltyValue>10</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="901">
+                    <noveltyValue>18</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="848">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="949">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="787">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="765">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="752">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="973">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>2</paretoFront>
+                </chromosome>
+                <chromosome id="795">
+                    <noveltyValue>42</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="815">
+                    <noveltyValue>55</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="968">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="877">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="786">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="909">
+                    <noveltyValue>13</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="801">
+                    <noveltyValue>14</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="745">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="916">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="796">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="782">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="841">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="907">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="760">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>3</paretoFront>
+                </chromosome>
+                <chromosome id="976">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="935">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="799">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="930">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="941">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="768">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="914">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="785">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="836">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="769">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="864">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="834">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="890">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="961">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>4</paretoFront>
+                </chromosome>
+                <chromosome id="917">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="964">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="830">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="820">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="922">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="947">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="746">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="779">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="932">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>5</paretoFront>
+                </chromosome>
+                <chromosome id="904">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="891">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="933">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="773">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="971">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="859">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>6</paretoFront>
+                </chromosome>
+                <chromosome id="898">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="884">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="931">
+                    <noveltyValue>17</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="912">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="862">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="822">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="874">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>7</paretoFront>
+                </chromosome>
+                <chromosome id="823">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="896">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="879">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="824">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="748">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="954">
+                    <noveltyValue>15</noveltyValue>
+                    <paretoFront>8</paretoFront>
+                </chromosome>
+                <chromosome id="892">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="875">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="855">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="842">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="738">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="963">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>9</paretoFront>
+                </chromosome>
+                <chromosome id="897">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="888">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="843">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="807">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>10</paretoFront>
+                </chromosome>
+                <chromosome id="766">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="955">
+                    <noveltyValue>15</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="852">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="936">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="883">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="969">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="806">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="948">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="797">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>11</paretoFront>
+                </chromosome>
+                <chromosome id="758">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="868">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="880">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="881">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="754">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="956">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="783">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="959">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>12</paretoFront>
+                </chromosome>
+                <chromosome id="829">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="833">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="808">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="937">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="856">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="844">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="747">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>13</paretoFront>
+                </chromosome>
+                <chromosome id="861">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="952">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="817">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="923">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="847">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="911">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="860">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="740">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="811">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="798">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="919">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="962">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="946">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>14</paretoFront>
+                </chromosome>
+                <chromosome id="838">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="840">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="784">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="918">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="732">
+                    <noveltyValue>14</noveltyValue>
+                    <paretoFront>15</paretoFront>
+                </chromosome>
+                <chromosome id="762">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="899">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="805">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="826">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>16</paretoFront>
+                </chromosome>
+                <chromosome id="793">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="759">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="778">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="895">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="761">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="776">
+                    <noveltyValue>4</noveltyValue>
+                    <paretoFront>17</paretoFront>
+                </chromosome>
+                <chromosome id="951">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="775">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="781">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="750">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>18</paretoFront>
+                </chromosome>
+                <chromosome id="943">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="770">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="800">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="846">
+                    <noveltyValue>6</noveltyValue>
+                    <paretoFront>19</paretoFront>
+                </chromosome>
+                <chromosome id="771">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>20</paretoFront>
+                </chromosome>
+                <chromosome id="942">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>20</paretoFront>
+                </chromosome>
+                <chromosome id="763">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>20</paretoFront>
+                </chromosome>
+                <chromosome id="810">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>20</paretoFront>
+                </chromosome>
+                <chromosome id="924">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="957">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="755">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="845">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="777">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>21</paretoFront>
+                </chromosome>
+                <chromosome id="894">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="850">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="735">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="788">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>22</paretoFront>
+                </chromosome>
+                <chromosome id="885">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>23</paretoFront>
+                </chromosome>
+                <chromosome id="772">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>23</paretoFront>
+                </chromosome>
+                <chromosome id="876">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>24</paretoFront>
+                </chromosome>
+                <chromosome id="767">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>24</paretoFront>
+                </chromosome>
+                <chromosome id="851">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>25</paretoFront>
+                </chromosome>
+                <chromosome id="757">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>25</paretoFront>
+                </chromosome>
+                <chromosome id="832">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>26</paretoFront>
+                </chromosome>
+                <chromosome id="857">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>26</paretoFront>
+                </chromosome>
+                <chromosome id="889">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>26</paretoFront>
+                </chromosome>
+                <chromosome id="828">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="869">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="934">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="816">
+                    <noveltyValue>9</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="774">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>27</paretoFront>
+                </chromosome>
+                <chromosome id="812">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>28</paretoFront>
+                </chromosome>
+                <chromosome id="730">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>28</paretoFront>
+                </chromosome>
+                <chromosome id="756">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>28</paretoFront>
+                </chromosome>
+                <chromosome id="794">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>29</paretoFront>
+                </chromosome>
+                <chromosome id="819">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>30</paretoFront>
+                </chromosome>
+                <chromosome id="925">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>31</paretoFront>
+                </chromosome>
+                <chromosome id="741">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>32</paretoFront>
+                </chromosome>
+                <chromosome id="908">
+                    <noveltyValue>2</noveltyValue>
+                    <paretoFront>32</paretoFront>
+                </chromosome>
+                <chromosome id="764">
+                    <noveltyValue>1</noveltyValue>
+                    <paretoFront>33</paretoFront>
+                </chromosome>
+                <chromosome id="910">
+                    <noveltyValue>8</noveltyValue>
+                    <paretoFront>38</paretoFront>
+                </chromosome>
+                <chromosome id="927">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>39</paretoFront>
+                </chromosome>
+                <chromosome id="882">
+                    <noveltyValue>11</noveltyValue>
+                    <paretoFront>42</paretoFront>
+                </chromosome>
+                <chromosome id="835">
+                    <noveltyValue>15</noveltyValue>
+                    <paretoFront>45</paretoFront>
+                </chromosome>
+                <chromosome id="958">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>47</paretoFront>
+                </chromosome>
+                <chromosome id="839">
+                    <noveltyValue>3</noveltyValue>
+                    <paretoFront>48</paretoFront>
+                </chromosome>
+                <chromosome id="887">
+                    <noveltyValue>7</noveltyValue>
+                    <paretoFront>56</paretoFront>
+                </chromosome>
+                <chromosome id="977">
+                    <noveltyValue>5</noveltyValue>
+                    <paretoFront>63</paretoFront>
+                </chromosome>
+                <chromosome id="902">
+                    <noveltyValue>12</noveltyValue>
+                    <paretoFront>76</paretoFront>
+                </chromosome>
+            </population>
+        </step>
+    </iecSteps>
+</series>

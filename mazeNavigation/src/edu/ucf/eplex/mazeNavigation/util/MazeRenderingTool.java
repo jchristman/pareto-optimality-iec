@@ -11,6 +11,7 @@ package edu.ucf.eplex.mazeNavigation.util;
 import edu.ucf.eplex.mazeNavigation.model.*;
 import edu.ucf.eplex.poaiecFramework.RenderingTool;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -101,7 +102,7 @@ public class MazeRenderingTool extends RenderingTool{
 	public void renderPointsVisited(Maze theMaze, Collection<Point2D> points, Graphics g, Dimension size) {
         this.theMaze = theMaze;
         setBackground(Color.WHITE, g, size);
-//        drawTheMaze(theMaze, g, size);
+        drawTheMaze(theMaze, g, size);
         drawPoints(points, Color.BLACK, g, size);
     }
 
@@ -157,11 +158,12 @@ public class MazeRenderingTool extends RenderingTool{
     private void drawTheMaze(Maze theMaze, Graphics g, Dimension size) {
         Graphics2D g2 = (Graphics2D) g;
         setSize(size);
+        g2.setStroke(new BasicStroke(14.0f));
 
         int x, y, dx, dy;
 
         // Draw the walls of the maze map
-        g.setColor(Color.DARK_GRAY);
+        g.setColor(Color.BLACK);
         for (Line2D wall : theMaze.getWalls()) {
             g2.draw(scale(wall));
         }
