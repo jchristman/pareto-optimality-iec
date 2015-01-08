@@ -30,7 +30,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import com.sun.tools.javac.util.Pair;
+import javafx.util.Pair;
 
 import edu.ucf.eplex.mazeNavigation.model.Position;
 
@@ -157,11 +157,8 @@ public class IECseriesTool {
 		// is the total novelty of the pareto front. I'm not computing anything to allow processing of the data
 		// in different ways later
 		ArrayList<Pair<Integer,Integer>> paretoFrontInfo = new ArrayList<Pair<Integer,Integer>>();
-		// Calculates how many of the 12 most novel individuals are in the first pareto front
+		// Calculates how many of the 12 most novel individuals are in the each pareto front
 		ArrayList<Pair<Integer,Integer>> mostNovelPerPF = new ArrayList<Pair<Integer,Integer>>();
-		// Calculates how many of the 12 most novel individuals are in the first 12 solutions presented to the
-		// user.
-		int mostNovelInFirst12 = 0;
 				
 		for (String inFile : inFiles) {
 //			System.out.println("Opening " + inFile);
@@ -187,7 +184,6 @@ public class IECseriesTool {
     	        pareto += getParetoOperationCount(series);
     	        getParetoFrontInfo(series, paretoFrontInfo);
     	        getMostNovelPerPF(series, mostNovelPerPF);
-    	        mostNovelInFirst12 = getMostNovelInFirst12();
 
     	        in.close();
 			} catch (FileNotFoundException e) {
@@ -204,15 +200,15 @@ public class IECseriesTool {
 		
 		String pfInfo = "";
 		for (Pair<Integer,Integer> pair : paretoFrontInfo)
-			pfInfo += pair.fst + ":" + pair.snd + ";";
+			pfInfo += pair.getKey() + ":" + pair.getValue() + ";";
 		pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
 		
 		String novelPerPF = "";
 		for (Pair<Integer,Integer> pair : mostNovelPerPF)
-			novelPerPF += pair.fst + ":" + pair.snd + ";";
+			novelPerPF += pair.getKey() + ":" + pair.getValue() + ";";
 		novelPerPF = novelPerPF.substring(0, novelPerPF.length() - 1);
 		
-		System.out.println(novelPerPF);
+		//System.out.println(novelPerPF);
 		
 		System.out.println(label + ", " + evaluations + ", " + connections + ", " + 
 				nodes + ", " + archiveSize + ", " + timeElapsed + ", " + userOperations + ", " + 
@@ -236,15 +232,9 @@ public class IECseriesTool {
 		
 	}
 
-	private int getMostNovelInFirst12() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-
-
 	private void getMostNovelPerPF(Node series,
 			ArrayList<Pair<Integer,Integer>> mostNovelPerPF) {
+		// TODO: Make this be cumulative for each step.
 		List<Pair<Integer,Integer>> mostNovelIndividuals = new LinkedList<Pair<Integer,Integer>>();
 		ArrayList<Integer> paretoFronts = new ArrayList<Integer>();
 		
@@ -277,9 +267,9 @@ public class IECseriesTool {
         								} else {
         									Pair<Integer,Integer> toReplace = null;
         									for (Pair<Integer,Integer> solution : mostNovelIndividuals) {
-        										if (solution.snd < noveltyValue || (solution.snd == noveltyValue && solution.fst < paretoFront)) {
+        										if (solution.getValue() < noveltyValue || (solution.getKey() == noveltyValue && solution.getKey() < paretoFront)) {
         											if (toReplace == null) toReplace = solution;
-        											else if (toReplace.snd < solution.snd || (toReplace.snd == solution.snd && toReplace.fst < solution.fst)) toReplace = solution;
+        											else if (toReplace.getValue() < solution.getValue() || (toReplace.getValue() == solution.getValue() && toReplace.getKey() < solution.getKey())) toReplace = solution;
         										}
         									}
         									if (toReplace != null) {
@@ -306,7 +296,7 @@ public class IECseriesTool {
 
 		Collections.sort(paretoFronts);
 		for (Pair<Integer,Integer> pair : mostNovelIndividuals) {
-			mostNovelPerPF.add(new Pair<Integer,Integer>(paretoFronts.indexOf(pair.fst), pair.snd));
+			mostNovelPerPF.add(new Pair<Integer,Integer>(paretoFronts.indexOf(pair.getKey()), pair.getValue()));
 		}
 	}
 
@@ -343,7 +333,7 @@ public class IECseriesTool {
         								} else {
         									Pair<Integer,Integer> cur = pfInfo.get(paretoFront);
         									pfInfo.put(paretoFront, new Pair<Integer,Integer>(
-        											cur.fst + 1, cur.snd + noveltyValue));
+        											cur.getKey() + 1, cur.getValue() + noveltyValue));
         								}
         							}
         							chromosome = chromosome.getNextSibling();
