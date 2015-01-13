@@ -65,8 +65,14 @@ public class PostProcessor {
     	// stopping when there is a gap in the sequence of numbers.
     	int i = 0;
     	String runDir = basePath + "/" + i;
-
+    	
     	while(new File(runDir).exists()) {
+    		// Delete my old CSV files
+	    	File firstPfCsv = new File(runDir + "/" + IECseriesTool.FIRST_PF_CSV);
+	    	if (firstPfCsv.exists()) firstPfCsv.delete();
+	    	File otherPfCsv = new File(runDir + "/" + IECseriesTool.OTHER_PF_CSV);
+	    	if (otherPfCsv.exists()) otherPfCsv.delete();
+	    	
     		int j = 0;
     		String fileName = runDir + "/" + "main_prev" + j + ".xml";
 
@@ -87,7 +93,7 @@ public class PostProcessor {
             }
 
             if (SUMMARY) {
-            	tool.printSummary(inFiles, "Run" + i);
+            	tool.printSummary(inFiles, runDir, "Run" + i);
             }
 
         	inFiles.clear();

@@ -11,6 +11,7 @@ package edu.ucf.eplex.mazeNavigation.util;
 import java.awt.geom.Point2D;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -31,7 +32,6 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import javafx.util.Pair;
-
 import edu.ucf.eplex.mazeNavigation.model.Position;
 
 /**
@@ -140,7 +140,7 @@ public class IECseriesTool {
         return allPoints;
 	}
 	
-	public void printSummary(List<String> inFiles, String label) {
+	public void printSummary(List<String> inFiles, String runDir, String label) throws IOException {
 		long evaluations = 0;
 		long connections = 0;
 		long nodes = 0;
@@ -157,8 +157,6 @@ public class IECseriesTool {
 		// is the total novelty of the pareto front. I'm not computing anything to allow processing of the data
 		// in different ways later
 		ArrayList<Pair<Integer,Integer>> paretoFrontInfo = new ArrayList<Pair<Integer,Integer>>();
-		// Calculates how many of the 12 most novel individuals are in the each pareto front
-		ArrayList<Pair<Integer,Integer>> mostNovelPerPF = new ArrayList<Pair<Integer,Integer>>();
 				
 		for (String inFile : inFiles) {
 //			System.out.println("Opening " + inFile);
@@ -183,7 +181,8 @@ public class IECseriesTool {
     	        forward += getFwdOperationCount(series);
     	        pareto += getParetoOperationCount(series);
     	        getParetoFrontInfo(series, paretoFrontInfo);
-    	        getMostNovelPerPF(series, mostNovelPerPF);
+		
+    	        outputPFsToCSV(series, runDir, label);
 
     	        in.close();
 			} catch (FileNotFoundException e) {
@@ -203,17 +202,16 @@ public class IECseriesTool {
 			pfInfo += pair.getKey() + ":" + pair.getValue() + ";";
 		pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
 		
-		String novelPerPF = "";
-		for (Pair<Integer,Integer> pair : mostNovelPerPF)
-			novelPerPF += pair.getKey() + ":" + pair.getValue() + ";";
-		novelPerPF = novelPerPF.substring(0, novelPerPF.length() - 1);
-		
-		//System.out.println(novelPerPF);
-		
-		System.out.println(label + ", " + evaluations + ", " + connections + ", " + 
+		String output = label + ", " + evaluations + ", " + connections + ", " + 
 				nodes + ", " + archiveSize + ", " + timeElapsed + ", " + userOperations + ", " + 
 				step + ", " + novelty + ", " + optimize + ", " + back + ", " + forward + ", " + 
-				pareto + ", " + pfInfo);
+				pareto + ", " + pfInfo;
+		
+		System.out.println("Finished " + label);
+		
+		FileWriter fw = new FileWriter(ALL_DATA_CSV, true);
+		fw.append(output + '\n');
+		fw.close();
 		
     	// TODO: generate output that matches this:
 //    	Run0	Run1	Run2	Run3	Run4	Run5	Run6	Run7	Run8	Run9	Run10	Run11	Run12	Run13	Run14	Run15	Run16	Run17	Run18	Run19	Run20	Run21	Run22	Run23	Run24	Run25	Run26	Run27	Run28	Run29	Run30
@@ -232,13 +230,10 @@ public class IECseriesTool {
 		
 	}
 
-	private void getMostNovelPerPF(Node series,
-			ArrayList<Pair<Integer,Integer>> mostNovelPerPF) {
-		// TODO: Make this be cumulative for each step.
-		List<Pair<Integer,Integer>> mostNovelIndividuals = new LinkedList<Pair<Integer,Integer>>();
-		ArrayList<Integer> paretoFronts = new ArrayList<Integer>();
-		
-		if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
+	private void outputPFsToCSV(Node series, String runDir, String runLabel) throws IOException {
+		FileWriter firstPfCsv = new FileWriter(runDir + "/" + FIRST_PF_CSV, true);
+		FileWriter otherPfCsv = new FileWriter(runDir + "/" + OTHER_PF_CSV, true);
+        if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
         	Node seriesAttribute = series.getFirstChild();
         	while (seriesAttribute != null) {
         		if (seriesAttribute.getNodeName().equals(IEC_STEPS_TAG)) {
@@ -260,22 +255,11 @@ public class IECseriesTool {
         								
         								int paretoFront = Integer.parseInt(pf.getTextContent());
         								int noveltyValue = Integer.parseInt(nov.getTextContent());
-        								if (!paretoFronts.contains(paretoFront)) paretoFronts.add(paretoFront);
-        								
-        								if (mostNovelIndividuals.size() < 12) {
-        									mostNovelIndividuals.add(new Pair<Integer,Integer>(paretoFront, noveltyValue));
+        								String toAppend = '"' + runLabel + '"' + "," + chromosome.getAttributes().getNamedItem(ID_LABEL).getNodeValue() + "," + noveltyValue + '\n';
+        								if (paretoFront == 0) {
+        									firstPfCsv.append(toAppend);
         								} else {
-        									Pair<Integer,Integer> toReplace = null;
-        									for (Pair<Integer,Integer> solution : mostNovelIndividuals) {
-        										if (solution.getValue() < noveltyValue || (solution.getKey() == noveltyValue && solution.getKey() < paretoFront)) {
-        											if (toReplace == null) toReplace = solution;
-        											else if (toReplace.getValue() < solution.getValue() || (toReplace.getValue() == solution.getValue() && toReplace.getKey() < solution.getKey())) toReplace = solution;
-        										}
-        									}
-        									if (toReplace != null) {
-        										mostNovelIndividuals.add(mostNovelIndividuals.indexOf(toReplace), new Pair<Integer,Integer>(paretoFront, noveltyValue));
-        										mostNovelIndividuals.remove(toReplace);
-        									}
+        									otherPfCsv.append(toAppend);
         								}
         							}
         							chromosome = chromosome.getNextSibling();
@@ -293,14 +277,9 @@ public class IECseriesTool {
         		seriesAttribute = seriesAttribute.getNextSibling();
         	}
         }
-
-		Collections.sort(paretoFronts);
-		for (Pair<Integer,Integer> pair : mostNovelIndividuals) {
-			mostNovelPerPF.add(new Pair<Integer,Integer>(paretoFronts.indexOf(pair.getKey()), pair.getValue()));
-		}
+		firstPfCsv.close();
+		otherPfCsv.close();
 	}
-
-
 
 	private void getParetoFrontInfo(Node series,
 			ArrayList<Pair<Integer, Integer>> paretoFrontInfo) {
@@ -575,4 +554,9 @@ public class IECseriesTool {
 	private static final String TIME_ELAPSED_TAG = "time";
 	private static final String TOTAL_ARCHIVE_TAG = "archive";
 	private static final String TOTAL_EVALUATIONS_TAG = "evaluations";
+	private static final String ID_LABEL = "id";
+	
+	public static final String FIRST_PF_CSV = "firstPF.csv";
+	public static final String OTHER_PF_CSV = "otherPF.csv";
+	public static final String ALL_DATA_CSV = "allData.csv";
 }
