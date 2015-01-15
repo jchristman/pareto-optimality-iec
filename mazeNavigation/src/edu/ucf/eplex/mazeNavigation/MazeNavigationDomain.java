@@ -347,7 +347,7 @@ public class MazeNavigationDomain extends EvaluationDomain<Path> {
     				checkBoxActionPerformed(evt);
     			}
     		});
-    		funcBox.setEnabled(false);
+    		funcBox.setEnabled(true);
     		
 		    horizGroup.addGroup(
 		    		optimizeOptionsPanel1Layout.createSequentialGroup()
@@ -388,7 +388,7 @@ public class MazeNavigationDomain extends EvaluationDomain<Path> {
         		ShowBehaviorActionPerformed(evt);
         	}
         });
-        showRobotBehavior.setEnabled(false);
+        showRobotBehavior.setEnabled(true);
 
         showPath.setSelected(true);
         showPath.setText("Show Robot Path");
@@ -398,7 +398,7 @@ public class MazeNavigationDomain extends EvaluationDomain<Path> {
         		ShowTrajectoryActionPerformed(evt);
         	}
         });
-        showPath.setEnabled(false);
+        showPath.setEnabled(true);
 
         GroupLayout domainOptionsPanel1Layout = new GroupLayout(options);
         options.setLayout(domainOptionsPanel1Layout);

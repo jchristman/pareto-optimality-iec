@@ -1012,7 +1012,8 @@ public class Genotype extends ProgressSource implements Serializable {
 	 * current population.
 	 */
 	private void removeLeastFitIndividual() {
-		Collections.sort(m_chromosomes, dominanceComparator);
+		try { Collections.sort(m_chromosomes, dominanceComparator); }
+		catch(IllegalArgumentException e){}
 		for (int i = 0; i < m_chromosomes.size(); i++) {
 			if (m_chromosomes.get(i).isProtected()) {
 				// Do nothing
