@@ -3966,7 +3966,8 @@ public class PoaiecSession extends JFrame implements ProgressListener {
         }
     }
 
-    private void StepMouseClicked(MouseEvent evt) {
+    @SuppressWarnings("unused")
+	private void StepMouseClicked(MouseEvent evt) {
         if (!running) {
             System.out.println("in StepMouseClicked()");
             progressMonitor = new ProgressMonitor(this, "Generating a new IEC population.", "", 0, 100);
@@ -4870,7 +4871,8 @@ public class PoaiecSession extends JFrame implements ProgressListener {
     private JButton Save;
 //    private JCheckBox ShowBehavior;
 //    private JCheckBox ShowTrajectory;
-    private JButton Step;
+    @SuppressWarnings("unused")
+	private JButton Step;
     private JPanel StepOptions;
     private JTabbedPane TabbedPopulation;
     private DomainOptionsPanel domainOptionsPanel1;
@@ -4890,7 +4892,8 @@ public class PoaiecSession extends JFrame implements ProgressListener {
     private JLabel jLabel19;
     @SuppressWarnings("unused")
 	private JLabel jLabel2;
-    private JLabel jLabel20;
+    @SuppressWarnings("unused")
+	private JLabel jLabel20;
 	@SuppressWarnings("unused")
 	private JLabel jLabel21;
     private JLabel jLabel22;

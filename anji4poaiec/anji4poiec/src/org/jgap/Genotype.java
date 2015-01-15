@@ -1211,6 +1211,10 @@ public class Genotype extends ProgressSource implements Serializable {
 		}
 	}
 
+	public synchronized void doAutomaticParetoOptimization() {
+		autoParetoOptimizationTask();
+	}
+	
 	public synchronized void doIECstep() {
 		if (isStopped()) {
 			task = new GenotypeIECtask();
@@ -1547,7 +1551,7 @@ public class Genotype extends ProgressSource implements Serializable {
 		System.out.println("recording last fitness population");
 		lastFitnessPopulation.addAll(m_chromosomes);
 
-		setPopulation(population);
+		setChromosomes(population);
 		unfiltered_chromosomes = m_chromosomes;
 		finishProgressListeners();
 
@@ -1692,6 +1696,53 @@ public class Genotype extends ProgressSource implements Serializable {
         }
 	}
 
+	/**
+	 * NSGA-II generally follows the following flow:
+	 * 1) Expand the population to double size 
+	 * 2) Select the N best individuals
+	 * 
+	 */
+	private void autoParetoOptimizationTask() {
+		expandPopulation(m_activeConfiguration.getIECpopulationSize() * 2);
+		
+		List<Chromosome> pareto = new LinkedList<Chromosome>();
+		pareto.addAll(m_chromosomes);
+
+		// Evaluate all of the current chromosomes
+		int i = 1;
+		for (Chromosome chrom : pareto) {
+			for (Entry<Long, EvaluationFunction> entry : m_activeConfiguration
+					.getBulkFitnessFunctions().entrySet()) {
+				entry.getValue().evaluate(chrom);
+				updateProgressListeners(noveltyProgress(i),
+						chromosomeIdArchive.size());
+				i++;
+
+				if (userRequestedStop()) {
+					break;
+				}
+			}
+		}
+		
+		setParetoDominance(pareto);
+		Chromosome seed = fittestChromosome(); // Need this to calculate the min/max for POPV
+
+		try { Collections.sort(pareto, dominanceComparator); }
+		catch (IllegalArgumentException e) {}
+		Collections.reverse(pareto);
+		
+		evaluateForNovelty(pareto);
+		
+		List<Chromosome> best_n_solutions = new LinkedList<Chromosome>();
+		for (i = 0; i < m_activeConfiguration.getIECpopulationSize(); i++) {
+			best_n_solutions.add(pareto.get(i)); // Add the best n solutions
+		}
+		
+		setChromosomes(best_n_solutions);
+		
+		//fireGeneticEvents();
+	}
+
 	public synchronized boolean isRunning() {
 		return !isStopped();
 	}
@@ -1773,6 +1824,23 @@ public class Genotype extends ProgressSource implements Serializable {
 			writeLock.lock();
 			try {
 				paretoOptimizationTask();
+			} finally {
+				writeLock.unlock();
+			}
+		}
+	}
+
+	/**
+	 * 
+	 * @author jchristman
+	 */
+	private class GenotypeAutoParetoTask extends GenotypeTask {
+		
+		@Override
+		public void run() {
+			writeLock.lock();
+			try {
+				autoParetoOptimizationTask();
 			} finally {
 				writeLock.unlock();
 			}

@@ -200,7 +200,7 @@ public class IECseriesTool {
 		String pfInfo = "";
 		for (Pair<Integer,Integer> pair : paretoFrontInfo)
 			pfInfo += pair.getKey() + ":" + pair.getValue() + ";";
-		pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
+		if (pfInfo.length() > 0) pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
 		
 		String output = label + ", " + evaluations + ", " + connections + ", " + 
 				nodes + ", " + archiveSize + ", " + timeElapsed + ", " + userOperations + ", " + 

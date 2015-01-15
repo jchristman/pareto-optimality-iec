@@ -11,6 +11,7 @@ package edu.ucf.eplex.poaiecFramework.domain;
 import com.anji.util.Configurable;
 
 import edu.ucf.eplex.poaiecFramework.PoaiecSession;
+import edu.ucf.eplex.poaiecFramework.controller.PoaiecController;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -43,6 +44,7 @@ public abstract class EvaluationDomain<Result> implements Configurable {
     
     protected final boolean DEFAULT_VIEWER = false;
     protected boolean viewerEnabled = DEFAULT_VIEWER;
+    public PoaiecController ctrl = null; // This is really a hack for automated search
 
     public EvaluationDomain() {}
     
@@ -69,6 +71,9 @@ public abstract class EvaluationDomain<Result> implements Configurable {
     }
     
     public Candidate getCandidate(Chromosome chrom) {
+    	if (session == null) {
+    		return ctrl.getCandidate(chrom); // Hack for automated search
+    	}
     	return session.poaiecSessionCtlr.getCandidate(chrom);
     }
 

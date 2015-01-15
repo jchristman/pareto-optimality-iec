@@ -61,7 +61,8 @@ public class PoaiecController {
 	private PoaiecRun history;
     private char slash = File.separatorChar;
     private final String logDirName = "." + slash + "runLogs";
-    private final String archiveName = "." + slash + "archive";
+    @SuppressWarnings("unused")
+	private final String archiveName = "." + slash + "archive";
     private Long startTime = System.currentTimeMillis();
 	/**
      *
@@ -186,6 +187,14 @@ public class PoaiecController {
 		genotype.clearStepCounter();
 		genotype.doShortTermOptimization(f_domain.getOptimizationFunctions());
 		System.out.println("end of controller.doOptimize()");
+	}
+	
+	public void doAutomatedSearchStep() {
+		System.out.println("in automated search step");
+		history.startParetoFunction(genotype, f_domain);
+		genotype.clearStepCounter();
+		genotype.doAutomaticParetoOptimization();
+		System.out.println("end of automated search step");
 	}
 
 	/**
@@ -486,12 +495,16 @@ public class PoaiecController {
 		genotype.registerProgressListener(aProgressListener);
 	}
 
+	public void recordEndOfStep() {
+		recordEndOfStep(true);
+	}
+
 	/**
      *
      */
-	public void recordEndOfStep() {
+	public void recordEndOfStep(boolean setCandidates) {
 		try {
-			f_domain.setUserEvaluatedCandidates(getCandidates());
+			if (setCandidates) f_domain.setUserEvaluatedCandidates(getCandidates());
 			// f_domain.evaluateFitness(getCandidates());
 			// f_domain.evaluateNovelty(getCandidates());
 			history.recordCurrentSessionState(genotype, f_domain);
