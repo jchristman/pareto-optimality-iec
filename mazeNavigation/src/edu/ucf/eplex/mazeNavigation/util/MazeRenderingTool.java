@@ -16,6 +16,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Stroke;
 import java.awt.geom.*;
 import java.util.Collection;
 
@@ -42,7 +43,7 @@ public class MazeRenderingTool extends RenderingTool{
         Graphics2D g2 = (Graphics2D) g;
         setSize(size);
 
-        drawTheMaze(theMaze, g, size);
+        drawTheMaze(theMaze, g, size, false);
 //        drawTheBreadcrumbTrail(theMaze, g, size);
 
         drawRobotPath(path, g, size);
@@ -60,7 +61,7 @@ public class MazeRenderingTool extends RenderingTool{
         Graphics2D g2 = (Graphics2D) g;
         setSize(size);
 
-        drawTheMaze(theMaze, g, size);
+        drawTheMaze(theMaze, g, size, false);
 //        drawTheBreadcrumbTrail(theMaze, g, size);
 
 
@@ -82,7 +83,7 @@ public class MazeRenderingTool extends RenderingTool{
 
     public void renderEnvironment(Maze theMaze, Path path, Graphics g, Dimension size) {
         this.theMaze = theMaze;
-        drawTheMaze(theMaze, g, size);
+        drawTheMaze(theMaze, g, size, false);
 
         if (theArchive != null) {
             drawTheArchivedRobotPositions(theArchive, g, size);
@@ -102,7 +103,7 @@ public class MazeRenderingTool extends RenderingTool{
 	public void renderPointsVisited(Maze theMaze, Collection<Point2D> points, Graphics g, Dimension size) {
         this.theMaze = theMaze;
         setBackground(Color.WHITE, g, size);
-        drawTheMaze(theMaze, g, size);
+        drawTheMaze(theMaze, g, size, true);
         drawPoints(points, Color.BLACK, g, size);
     }
 
@@ -155,11 +156,14 @@ public class MazeRenderingTool extends RenderingTool{
         panelSize = size;
     }
 
-    private void drawTheMaze(Maze theMaze, Graphics g, Dimension size) {
+    private void drawTheMaze(Maze theMaze, Graphics g, Dimension size, boolean isPostProcessor) {
         Graphics2D g2 = (Graphics2D) g;
         setSize(size);
-        g2.setStroke(new BasicStroke(14.0f));
-
+        Stroke stroke = g2.getStroke();
+        if (isPostProcessor) {
+	        g2.setStroke(new BasicStroke(14.0f));
+        }
+        
         int x, y, dx, dy;
 
         // Draw the walls of the maze map
@@ -181,6 +185,7 @@ public class MazeRenderingTool extends RenderingTool{
         dx = scale(f_goalSize);
         dy = scale(f_goalSize);
         g2.draw(new Ellipse2D.Double(x, y, dx, dy));
+        g2.setStroke(stroke);
     }
 
     @SuppressWarnings("unused")
