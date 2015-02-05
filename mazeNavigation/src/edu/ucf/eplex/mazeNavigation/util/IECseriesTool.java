@@ -180,9 +180,10 @@ public class IECseriesTool {
     	        back += getBackOperationCount(series);
     	        forward += getFwdOperationCount(series);
     	        pareto += getParetoOperationCount(series);
-    	        getParetoFrontInfo(series, paretoFrontInfo);
+    	        //getParetoFrontInfo(series, paretoFrontInfo);
 		
     	        outputPFsToCSV(series, runDir, label);
+    	        outputPOPVsToCSV(series, runDir, label);
 
     	        in.close();
 			} catch (FileNotFoundException e) {
@@ -197,15 +198,15 @@ public class IECseriesTool {
 			
 		}
 		
-		String pfInfo = "";
-		for (Pair<Integer,Integer> pair : paretoFrontInfo)
-			pfInfo += pair.getKey() + ":" + pair.getValue() + ";";
-		if (pfInfo.length() > 0) pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
+		//String pfInfo = "";
+		//for (Pair<Integer,Integer> pair : paretoFrontInfo)
+		//	pfInfo += pair.getKey() + ":" + pair.getValue() + ";";
+		//if (pfInfo.length() > 0) pfInfo = pfInfo.substring(0, pfInfo.length() - 1);
 		
 		String output = label + ", " + evaluations + ", " + connections + ", " + 
 				nodes + ", " + archiveSize + ", " + timeElapsed + ", " + userOperations + ", " + 
 				step + ", " + novelty + ", " + optimize + ", " + back + ", " + forward + ", " + 
-				pareto + ", " + pfInfo;
+				pareto;
 		
 		System.out.println("Finished " + label);
 		
@@ -279,6 +280,52 @@ public class IECseriesTool {
         }
 		firstPfCsv.close();
 		otherPfCsv.close();
+	}
+
+	private void outputPOPVsToCSV(Node series, String runDir, String runLabel) throws IOException {
+		FileWriter popvCsv = new FileWriter(runDir + "/" + POPV_CSV, true);
+		boolean first = true;
+		
+        if (series.getNodeName().equalsIgnoreCase(SERIES_TAG)) {
+        	Node seriesAttribute = series.getFirstChild();
+        	while (seriesAttribute != null) {
+        		if (seriesAttribute.getNodeName().equals(IEC_STEPS_TAG)) {
+        			Node stepNode = seriesAttribute.getFirstChild();
+        			while (stepNode != null) {
+        				Node stepAttribute = stepNode.getFirstChild();
+        				while (stepAttribute != null) {
+        					if (stepAttribute.getNodeName().equals(POPV_TAG)) {
+        						String headers = "";
+        						String toAppend = runLabel + ",";
+        						Node objFunc = stepAttribute.getFirstChild();
+        						while (objFunc != null) {
+        							if (objFunc.getNodeName().equals(OBJ_FUNC_TAG)) {
+        								if (first) {
+        									String funcId = objFunc.getAttributes().getNamedItem(OBJ_ID_LABEL).getNodeValue();
+        									headers += funcId + ",";
+        								}
+        								float funcWeight = Float.parseFloat(objFunc.getTextContent());
+        								toAppend += funcWeight + ",";
+        							}
+        							objFunc = objFunc.getNextSibling();
+        						}
+        						if (first) headers = "Objective ID:," + headers + '\n';
+        						first = false;
+                                popvCsv.append(headers + toAppend + '\n');
+        						break;
+        					}
+        					stepAttribute = stepAttribute.getNextSibling();
+        				}
+        				if (true) {
+        					
+        				}
+        				stepNode = stepNode.getNextSibling();
+        			}
+        		}
+        		seriesAttribute = seriesAttribute.getNextSibling();
+        	}
+        }
+        popvCsv.close();
 	}
 
 	private void getParetoFrontInfo(Node series,
@@ -544,10 +591,12 @@ public class IECseriesTool {
 	private static final String IEC_STEPS_TAG = "iecSteps";
 	private static final String NODE_COUNT_TAG = "nodes";
 	private static final String NOVELTY_TAG = "noveltyValue";
+	private static final String OBJ_FUNC_TAG = "objectiveFunction";
 	private static final String PF_TAG = "paretoFront";
 	private static final String POSITION_COUNT_TAG = "count";
 	private static final String POSITION_TAG = "position";
 	private static final String POPULATION_TAG = "population";
+	private static final String POPV_TAG = "POPV";
 	private static final String SERIES_TAG = "series";
 	private static final String SOLUTION_TAG = "solution";
 	private static final String STEP_TAG = "step";
@@ -555,8 +604,10 @@ public class IECseriesTool {
 	private static final String TOTAL_ARCHIVE_TAG = "archive";
 	private static final String TOTAL_EVALUATIONS_TAG = "evaluations";
 	private static final String ID_LABEL = "id";
+	private static final String OBJ_ID_LABEL = "obj_id";
 	
 	public static final String FIRST_PF_CSV = "firstPF.csv";
 	public static final String OTHER_PF_CSV = "otherPF.csv";
 	public static final String ALL_DATA_CSV = "allData.csv";
+	public static final String POPV_CSV = "popv.csv";
 }
